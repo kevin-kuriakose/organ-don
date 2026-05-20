@@ -1,0 +1,48 @@
+{
+  "actions": [],
+  "creation": "2024-01-01 00:00:00.000000",
+  "doctype": "DocType",
+  "editable_grid": 1,
+  "engine": "InnoDB",
+  "istable": 1,
+  "field_order": [
+    "coordinator",
+    "dates_on_call",
+    "shift",
+    "backup_coordinator"
+  ],
+  "fields": [
+    {
+      "fieldname": "coordinator",
+      "fieldtype": "Link",
+      "label": "Coordinator",
+      "options": "Transplant Coordinator",
+      "in_list_view": 1,
+      "reqd": 1
+    },
+    {
+      "fieldname": "dates_on_call",
+      "fieldtype": "Data",
+      "label": "Dates On Call",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "shift",
+      "fieldtype": "Select",
+      "label": "Shift",
+      "options": "\nMorning\nAfternoon\nNight\n24 Hour",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "backup_coordinator",
+      "fieldtype": "Link",
+      "label": "Backup Coordinator",
+      "options": "Transplant Coordinator"
+    }
+  ],
+  "module": "Organ Donation",
+  "name": "On Call Schedule Entry",
+  "owner": "Administrator",
+  "permissions": [],
+  "track_changes": 0
+}

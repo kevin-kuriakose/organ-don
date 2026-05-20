@@ -1,0 +1,39 @@
+{
+  "actions": [],
+  "creation": "2024-01-01 00:00:00.000000",
+  "doctype": "DocType",
+  "editable_grid": 1,
+  "engine": "InnoDB",
+  "istable": 1,
+  "field_order": [
+    "batch",
+    "quantity",
+    "expiry_date"
+  ],
+  "fields": [
+    {
+      "fieldname": "batch",
+      "fieldtype": "Data",
+      "label": "Batch",
+      "in_list_view": 1,
+      "reqd": 1
+    },
+    {
+      "fieldname": "quantity",
+      "fieldtype": "Int",
+      "label": "Quantity",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "expiry_date",
+      "fieldtype": "Date",
+      "label": "Expiry Date",
+      "in_list_view": 1
+    }
+  ],
+  "module": "Organ Donation",
+  "name": "Tissue Storage Batch",
+  "owner": "Administrator",
+  "permissions": [],
+  "track_changes": 0
+}

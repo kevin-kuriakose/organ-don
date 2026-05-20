@@ -1,0 +1,32 @@
+{
+  "actions": [],
+  "creation": "2024-01-01 00:00:00.000000",
+  "doctype": "DocType",
+  "editable_grid": 1,
+  "engine": "InnoDB",
+  "istable": 1,
+  "field_order": [
+    "allergen",
+    "reaction"
+  ],
+  "fields": [
+    {
+      "fieldname": "allergen",
+      "fieldtype": "Data",
+      "label": "Allergen",
+      "in_list_view": 1,
+      "reqd": 1
+    },
+    {
+      "fieldname": "reaction",
+      "fieldtype": "Data",
+      "label": "Reaction",
+      "in_list_view": 1
+    }
+  ],
+  "module": "Organ Donation",
+  "name": "Recipient Allergy",
+  "owner": "Administrator",
+  "permissions": [],
+  "track_changes": 0
+}

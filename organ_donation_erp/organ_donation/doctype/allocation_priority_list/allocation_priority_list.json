@@ -1,0 +1,60 @@
+{
+  "actions": [],
+  "creation": "2024-01-01 00:00:00.000000",
+  "doctype": "DocType",
+  "editable_grid": 1,
+  "engine": "InnoDB",
+  "istable": 1,
+  "field_order": [
+    "rank",
+    "recipient",
+    "hospital",
+    "urgency_score",
+    "match_score",
+    "offer_status"
+  ],
+  "fields": [
+    {
+      "fieldname": "rank",
+      "fieldtype": "Int",
+      "label": "Rank",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "recipient",
+      "fieldtype": "Link",
+      "label": "Recipient",
+      "options": "Recipient",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "hospital",
+      "fieldtype": "Link",
+      "label": "Hospital",
+      "options": "Hospital"
+    },
+    {
+      "fieldname": "urgency_score",
+      "fieldtype": "Float",
+      "label": "Urgency Score",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "match_score",
+      "fieldtype": "Float",
+      "label": "Match Score"
+    },
+    {
+      "fieldname": "offer_status",
+      "fieldtype": "Select",
+      "label": "Offer Status",
+      "options": "\nPending\nOffered\nAccepted\nDeclined",
+      "in_list_view": 1
+    }
+  ],
+  "module": "Organ Donation",
+  "name": "Allocation Priority List",
+  "owner": "Administrator",
+  "permissions": [],
+  "track_changes": 0
+}

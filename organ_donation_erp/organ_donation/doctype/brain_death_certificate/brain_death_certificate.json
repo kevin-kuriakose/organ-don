@@ -1,0 +1,140 @@
+{
+  "actions": [],
+  "autoname": "naming_series:",
+  "creation": "2024-01-01 00:00:00.000000",
+  "doctype": "DocType",
+  "editable_grid": 1,
+  "engine": "InnoDB",
+  "field_order": [
+    "naming_series",
+    "deceased_donor",
+    "hospital",
+    "first_declaration_date",
+    "second_declaration_date",
+    "doctors_panel",
+    "apnoea_test_result",
+    "confirmatory_test_type",
+    "confirmatory_test_result",
+    "legal_compliance_flag",
+    "certificate_number",
+    "status",
+    "amended_from"
+  ],
+  "fields": [
+    {
+      "fieldname": "naming_series",
+      "fieldtype": "Series",
+      "label": "Series",
+      "options": "BDC-.YYYY.-.#####",
+      "default": "BDC-.YYYY.-.#####"
+    },
+    {
+      "fieldname": "deceased_donor",
+      "fieldtype": "Link",
+      "label": "Deceased Donor",
+      "options": "Deceased Donor",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "hospital",
+      "fieldtype": "Link",
+      "label": "Hospital",
+      "options": "Hospital",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "first_declaration_date",
+      "fieldtype": "Datetime",
+      "label": "First Declaration Date",
+      "reqd": 1
+    },
+    {
+      "fieldname": "second_declaration_date",
+      "fieldtype": "Datetime",
+      "label": "Second Declaration Date"
+    },
+    {
+      "fieldname": "doctors_panel",
+      "fieldtype": "Table",
+      "label": "Doctors Panel",
+      "options": "Brain Death Certificate Doctor"
+    },
+    {
+      "fieldname": "apnoea_test_result",
+      "fieldtype": "Select",
+      "label": "Apnoea Test Result",
+      "options": "\nPositive\nNegative\nInconclusive"
+    },
+    {
+      "fieldname": "confirmatory_test_type",
+      "fieldtype": "Select",
+      "label": "Confirmatory Test Type",
+      "options": "\nEEG\nSSEP\nCBFA\nDoppler"
+    },
+    {
+      "fieldname": "confirmatory_test_result",
+      "fieldtype": "Select",
+      "label": "Confirmatory Test Result",
+      "options": "\nConfirmed\nNot Confirmed\nInconclusive"
+    },
+    {
+      "fieldname": "legal_compliance_flag",
+      "fieldtype": "Check",
+      "label": "Legal Compliance Confirmed"
+    },
+    {
+      "fieldname": "certificate_number",
+      "fieldtype": "Data",
+      "label": "Certificate Number"
+    },
+    {
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "label": "Status",
+      "options": "Draft\nDeclared\nFiled",
+      "default": "Draft",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "amended_from",
+      "fieldtype": "Link",
+      "label": "Amended From",
+      "options": "Brain Death Certificate",
+      "no_copy": 1,
+      "print_hide": 1,
+      "read_only": 1
+    }
+  ],
+  "module": "Organ Donation",
+  "name": "Brain Death Certificate",
+  "naming_rule": "By \"Naming Series\" field",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "role": "System Manager",
+      "permlevel": 0,
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "submit": 1,
+      "cancel": 1,
+      "amend": 1,
+      "report": 1,
+      "export": 1,
+      "print": 1,
+      "email": 1,
+      "share": 1
+    },
+    {
+      "role": "All",
+      "permlevel": 0,
+      "read": 1,
+      "report": 1
+    }
+  ],
+  "title_field": "deceased_donor",
+  "track_changes": 1,
+  "is_submittable": 1
+}

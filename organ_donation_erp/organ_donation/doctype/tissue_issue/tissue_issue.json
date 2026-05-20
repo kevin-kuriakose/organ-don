@@ -1,0 +1,114 @@
+{
+  "actions": [],
+  "autoname": "naming_series:",
+  "creation": "2024-01-01 00:00:00.000000",
+  "doctype": "DocType",
+  "editable_grid": 1,
+  "engine": "InnoDB",
+  "field_order": [
+    "naming_series",
+    "tissue_donor",
+    "tissue_type",
+    "issued_to_hospital",
+    "issued_to_surgeon",
+    "issue_date",
+    "recipient_name",
+    "surgery_date",
+    "outcome",
+    "status"
+  ],
+  "fields": [
+    {
+      "fieldname": "naming_series",
+      "fieldtype": "Series",
+      "label": "Series",
+      "options": "TI-.YYYY.-.#####",
+      "default": "TI-.YYYY.-.#####"
+    },
+    {
+      "fieldname": "tissue_donor",
+      "fieldtype": "Link",
+      "label": "Tissue Donor",
+      "options": "Tissue Donor",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "tissue_type",
+      "fieldtype": "Select",
+      "label": "Tissue Type",
+      "options": "\nCornea\nBone\nSkin\nHeart Valve\nTendons\nAmniotic Membrane\nCartilage\nBlood Vessels\nNerve Graft",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "issued_to_hospital",
+      "fieldtype": "Link",
+      "label": "Issued To Hospital",
+      "options": "Hospital",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "issued_to_surgeon",
+      "fieldtype": "Data",
+      "label": "Issued To Surgeon"
+    },
+    {
+      "fieldname": "issue_date",
+      "fieldtype": "Date",
+      "label": "Issue Date",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "recipient_name",
+      "fieldtype": "Data",
+      "label": "Recipient Name"
+    },
+    {
+      "fieldname": "surgery_date",
+      "fieldtype": "Date",
+      "label": "Surgery Date"
+    },
+    {
+      "fieldname": "outcome",
+      "fieldtype": "Select",
+      "label": "Outcome",
+      "options": "\nSuccessful\nFailed\nPending"
+    },
+    {
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "label": "Status",
+      "options": "Issued\nUsed\nReturned\nDiscarded",
+      "default": "Issued",
+      "in_list_view": 1
+    }
+  ],
+  "module": "Organ Donation",
+  "name": "Tissue Issue",
+  "naming_rule": "By \"Naming Series\" field",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "role": "System Manager",
+      "permlevel": 0,
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "report": 1,
+      "export": 1,
+      "print": 1,
+      "email": 1,
+      "share": 1
+    },
+    {
+      "role": "All",
+      "permlevel": 0,
+      "read": 1,
+      "report": 1
+    }
+  ],
+  "title_field": "tissue_donor",
+  "track_changes": 1
+}

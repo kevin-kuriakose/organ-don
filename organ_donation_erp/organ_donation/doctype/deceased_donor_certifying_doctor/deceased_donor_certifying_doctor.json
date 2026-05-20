@@ -1,0 +1,39 @@
+{
+  "actions": [],
+  "creation": "2024-01-01 00:00:00.000000",
+  "doctype": "DocType",
+  "editable_grid": 1,
+  "engine": "InnoDB",
+  "istable": 1,
+  "field_order": [
+    "doctor_name",
+    "designation",
+    "certificate_date"
+  ],
+  "fields": [
+    {
+      "fieldname": "doctor_name",
+      "fieldtype": "Data",
+      "label": "Doctor Name",
+      "in_list_view": 1,
+      "reqd": 1
+    },
+    {
+      "fieldname": "designation",
+      "fieldtype": "Data",
+      "label": "Designation",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "certificate_date",
+      "fieldtype": "Date",
+      "label": "Certificate Date",
+      "in_list_view": 1
+    }
+  ],
+  "module": "Organ Donation",
+  "name": "Deceased Donor Certifying Doctor",
+  "owner": "Administrator",
+  "permissions": [],
+  "track_changes": 0
+}

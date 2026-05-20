@@ -1,0 +1,121 @@
+{
+  "actions": [],
+  "autoname": "field:recipient",
+  "creation": "2024-01-01 00:00:00.000000",
+  "doctype": "DocType",
+  "editable_grid": 1,
+  "engine": "InnoDB",
+  "field_order": [
+    "recipient",
+    "organ_record",
+    "transplant_surgery",
+    "survival_1_month",
+    "survival_6_months",
+    "survival_1_year",
+    "survival_5_years",
+    "cause_of_graft_failure",
+    "cause_of_patient_death",
+    "quality_of_life_score",
+    "return_to_normal_activity",
+    "notes"
+  ],
+  "fields": [
+    {
+      "fieldname": "recipient",
+      "fieldtype": "Link",
+      "label": "Recipient",
+      "options": "Recipient",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "organ_record",
+      "fieldtype": "Link",
+      "label": "Organ Record",
+      "options": "Organ Record"
+    },
+    {
+      "fieldname": "transplant_surgery",
+      "fieldtype": "Link",
+      "label": "Transplant Surgery",
+      "options": "Transplant Surgery"
+    },
+    {
+      "fieldname": "survival_1_month",
+      "fieldtype": "Select",
+      "label": "Survival at 1 Month",
+      "options": "\nAlive\nGraft Failure\nPatient Death",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "survival_6_months",
+      "fieldtype": "Select",
+      "label": "Survival at 6 Months",
+      "options": "\nAlive\nGraft Failure\nPatient Death"
+    },
+    {
+      "fieldname": "survival_1_year",
+      "fieldtype": "Select",
+      "label": "Survival at 1 Year",
+      "options": "\nAlive\nGraft Failure\nPatient Death"
+    },
+    {
+      "fieldname": "survival_5_years",
+      "fieldtype": "Select",
+      "label": "Survival at 5 Years",
+      "options": "\nAlive\nGraft Failure\nPatient Death"
+    },
+    {
+      "fieldname": "cause_of_graft_failure",
+      "fieldtype": "Data",
+      "label": "Cause of Graft Failure"
+    },
+    {
+      "fieldname": "cause_of_patient_death",
+      "fieldtype": "Data",
+      "label": "Cause of Patient Death"
+    },
+    {
+      "fieldname": "quality_of_life_score",
+      "fieldtype": "Float",
+      "label": "Quality of Life Score"
+    },
+    {
+      "fieldname": "return_to_normal_activity",
+      "fieldtype": "Check",
+      "label": "Return to Normal Activity"
+    },
+    {
+      "fieldname": "notes",
+      "fieldtype": "Text Editor",
+      "label": "Notes"
+    }
+  ],
+  "module": "Organ Donation",
+  "name": "Graft Outcome",
+  "naming_rule": "By fieldname",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "role": "System Manager",
+      "permlevel": 0,
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "report": 1,
+      "export": 1,
+      "print": 1,
+      "email": 1,
+      "share": 1
+    },
+    {
+      "role": "All",
+      "permlevel": 0,
+      "read": 1,
+      "report": 1
+    }
+  ],
+  "title_field": "recipient",
+  "track_changes": 1
+}

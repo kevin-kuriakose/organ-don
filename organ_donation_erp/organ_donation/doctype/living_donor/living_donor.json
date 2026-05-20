@@ -1,0 +1,157 @@
+{
+  "actions": [],
+  "autoname": "naming_series:",
+  "creation": "2024-01-01 00:00:00.000000",
+  "doctype": "DocType",
+  "editable_grid": 1,
+  "engine": "InnoDB",
+  "field_order": [
+    "naming_series",
+    "donor_name",
+    "date_of_birth",
+    "gender",
+    "blood_group",
+    "relationship_to_recipient",
+    "hospital",
+    "evaluation_start_date",
+    "evaluation_complete_date",
+    "medical_fitness_status",
+    "psychological_evaluation_status",
+    "authorization_committee_approval_date",
+    "authorization_number",
+    "organs_offered",
+    "surgery_date",
+    "surgeon",
+    "status"
+  ],
+  "fields": [
+    {
+      "fieldname": "naming_series",
+      "fieldtype": "Series",
+      "label": "Series",
+      "options": "LD-.YYYY.-.#####",
+      "default": "LD-.YYYY.-.#####"
+    },
+    {
+      "fieldname": "donor_name",
+      "fieldtype": "Data",
+      "label": "Donor Name",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "date_of_birth",
+      "fieldtype": "Date",
+      "label": "Date of Birth"
+    },
+    {
+      "fieldname": "gender",
+      "fieldtype": "Select",
+      "label": "Gender",
+      "options": "\nMale\nFemale\nOther"
+    },
+    {
+      "fieldname": "blood_group",
+      "fieldtype": "Select",
+      "label": "Blood Group",
+      "options": "\nA Positive\nA Negative\nB Positive\nB Negative\nAB Positive\nAB Negative\nO Positive\nO Negative"
+    },
+    {
+      "fieldname": "relationship_to_recipient",
+      "fieldtype": "Select",
+      "label": "Relationship to Recipient",
+      "options": "\nSpouse\nParent\nChild\nSibling\nGrandparent\nUnrelated"
+    },
+    {
+      "fieldname": "hospital",
+      "fieldtype": "Link",
+      "label": "Hospital",
+      "options": "Hospital",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "evaluation_start_date",
+      "fieldtype": "Date",
+      "label": "Evaluation Start Date"
+    },
+    {
+      "fieldname": "evaluation_complete_date",
+      "fieldtype": "Date",
+      "label": "Evaluation Complete Date"
+    },
+    {
+      "fieldname": "medical_fitness_status",
+      "fieldtype": "Select",
+      "label": "Medical Fitness Status",
+      "options": "\nFit\nUnfit\nPending",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "psychological_evaluation_status",
+      "fieldtype": "Select",
+      "label": "Psychological Evaluation Status",
+      "options": "\nCleared\nNot Cleared\nPending"
+    },
+    {
+      "fieldname": "authorization_committee_approval_date",
+      "fieldtype": "Date",
+      "label": "Authorization Committee Approval Date"
+    },
+    {
+      "fieldname": "authorization_number",
+      "fieldtype": "Data",
+      "label": "Authorization Number"
+    },
+    {
+      "fieldname": "organs_offered",
+      "fieldtype": "Table",
+      "label": "Organs Offered",
+      "options": "Living Donor Organ Offered"
+    },
+    {
+      "fieldname": "surgery_date",
+      "fieldtype": "Date",
+      "label": "Surgery Date"
+    },
+    {
+      "fieldname": "surgeon",
+      "fieldtype": "Data",
+      "label": "Surgeon"
+    },
+    {
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "label": "Status",
+      "options": "Evaluation\nApproved\nSurgery Scheduled\nCompleted\nWithdrawn",
+      "default": "Evaluation",
+      "in_list_view": 1
+    }
+  ],
+  "module": "Organ Donation",
+  "name": "Living Donor",
+  "naming_rule": "By \"Naming Series\" field",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "role": "System Manager",
+      "permlevel": 0,
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "report": 1,
+      "export": 1,
+      "print": 1,
+      "email": 1,
+      "share": 1
+    },
+    {
+      "role": "All",
+      "permlevel": 0,
+      "read": 1,
+      "report": 1
+    }
+  ],
+  "title_field": "donor_name",
+  "track_changes": 1
+}

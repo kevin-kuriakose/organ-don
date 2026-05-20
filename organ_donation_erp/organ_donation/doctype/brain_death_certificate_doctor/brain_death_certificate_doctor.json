@@ -1,0 +1,45 @@
+{
+  "actions": [],
+  "creation": "2024-01-01 00:00:00.000000",
+  "doctype": "DocType",
+  "editable_grid": 1,
+  "engine": "InnoDB",
+  "istable": 1,
+  "field_order": [
+    "doctor_name",
+    "designation",
+    "specialization",
+    "signature_date"
+  ],
+  "fields": [
+    {
+      "fieldname": "doctor_name",
+      "fieldtype": "Data",
+      "label": "Doctor Name",
+      "in_list_view": 1,
+      "reqd": 1
+    },
+    {
+      "fieldname": "designation",
+      "fieldtype": "Data",
+      "label": "Designation",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "specialization",
+      "fieldtype": "Data",
+      "label": "Specialization"
+    },
+    {
+      "fieldname": "signature_date",
+      "fieldtype": "Date",
+      "label": "Signature Date",
+      "in_list_view": 1
+    }
+  ],
+  "module": "Organ Donation",
+  "name": "Brain Death Certificate Doctor",
+  "owner": "Administrator",
+  "permissions": [],
+  "track_changes": 0
+}

@@ -1,0 +1,125 @@
+{
+  "actions": [],
+  "autoname": "naming_series:",
+  "creation": "2024-01-01 00:00:00.000000",
+  "doctype": "DocType",
+  "editable_grid": 1,
+  "engine": "InnoDB",
+  "field_order": [
+    "naming_series",
+    "deceased_donor",
+    "procurement_date",
+    "procurement_hospital",
+    "retrieval_team",
+    "organs_procured",
+    "perfusion_solution_used",
+    "back_table_notes",
+    "case_coordinator",
+    "notto_case_reference",
+    "sotto_case_reference",
+    "status"
+  ],
+  "fields": [
+    {
+      "fieldname": "naming_series",
+      "fieldtype": "Series",
+      "label": "Series",
+      "options": "PC-.YYYY.-.#####",
+      "default": "PC-.YYYY.-.#####"
+    },
+    {
+      "fieldname": "deceased_donor",
+      "fieldtype": "Link",
+      "label": "Deceased Donor",
+      "options": "Deceased Donor",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "procurement_date",
+      "fieldtype": "Date",
+      "label": "Procurement Date",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "procurement_hospital",
+      "fieldtype": "Link",
+      "label": "Procurement Hospital",
+      "options": "Hospital"
+    },
+    {
+      "fieldname": "retrieval_team",
+      "fieldtype": "Table",
+      "label": "Retrieval Team",
+      "options": "Retrieval Team Member"
+    },
+    {
+      "fieldname": "organs_procured",
+      "fieldtype": "Table",
+      "label": "Organs Procured",
+      "options": "Organs Procured"
+    },
+    {
+      "fieldname": "perfusion_solution_used",
+      "fieldtype": "Data",
+      "label": "Perfusion Solution Used"
+    },
+    {
+      "fieldname": "back_table_notes",
+      "fieldtype": "Text Editor",
+      "label": "Back Table Notes"
+    },
+    {
+      "fieldname": "case_coordinator",
+      "fieldtype": "Link",
+      "label": "Case Coordinator",
+      "options": "Transplant Coordinator"
+    },
+    {
+      "fieldname": "notto_case_reference",
+      "fieldtype": "Data",
+      "label": "NOTTO Case Reference"
+    },
+    {
+      "fieldname": "sotto_case_reference",
+      "fieldtype": "Data",
+      "label": "SOTTO Case Reference"
+    },
+    {
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "label": "Status",
+      "options": "Planned\nIn Progress\nCompleted\nPartially Completed",
+      "default": "Planned",
+      "in_list_view": 1
+    }
+  ],
+  "module": "Organ Donation",
+  "name": "Procurement Case",
+  "naming_rule": "By \"Naming Series\" field",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "role": "System Manager",
+      "permlevel": 0,
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "report": 1,
+      "export": 1,
+      "print": 1,
+      "email": 1,
+      "share": 1
+    },
+    {
+      "role": "All",
+      "permlevel": 0,
+      "read": 1,
+      "report": 1
+    }
+  ],
+  "title_field": "deceased_donor",
+  "track_changes": 1
+}

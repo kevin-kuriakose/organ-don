@@ -1,0 +1,37 @@
+{
+  "actions": [],
+  "creation": "2024-01-01 00:00:00.000000",
+  "doctype": "DocType",
+  "editable_grid": 1,
+  "engine": "InnoDB",
+  "istable": 1,
+  "field_order": [
+    "training_name",
+    "date",
+    "certificate"
+  ],
+  "fields": [
+    {
+      "fieldname": "training_name",
+      "fieldtype": "Data",
+      "label": "Training Name",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "date",
+      "fieldtype": "Date",
+      "label": "Date",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "certificate",
+      "fieldtype": "Data",
+      "label": "Certificate Number"
+    }
+  ],
+  "module": "Organ Donation",
+  "name": "Coordinator Training",
+  "owner": "Administrator",
+  "permissions": [],
+  "track_changes": 0
+}

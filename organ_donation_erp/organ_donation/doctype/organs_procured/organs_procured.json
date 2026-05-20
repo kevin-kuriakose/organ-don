@@ -1,0 +1,47 @@
+{
+  "actions": [],
+  "creation": "2024-01-01 00:00:00.000000",
+  "doctype": "DocType",
+  "editable_grid": 1,
+  "engine": "InnoDB",
+  "istable": 1,
+  "field_order": [
+    "organ_type",
+    "procurement_time",
+    "cold_ischemia_start_time",
+    "viability_status"
+  ],
+  "fields": [
+    {
+      "fieldname": "organ_type",
+      "fieldtype": "Select",
+      "label": "Organ Type",
+      "options": "\nKidney (Left)\nKidney (Right)\nLiver\nHeart\nLung (Left)\nLung (Right)\nBoth Lungs\nPancreas\nIntestine\nCornea (Left)\nCornea (Right)\nBone\nSkin\nHeart Valve",
+      "in_list_view": 1,
+      "reqd": 1
+    },
+    {
+      "fieldname": "procurement_time",
+      "fieldtype": "Datetime",
+      "label": "Procurement Time",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "cold_ischemia_start_time",
+      "fieldtype": "Datetime",
+      "label": "Cold Ischemia Start"
+    },
+    {
+      "fieldname": "viability_status",
+      "fieldtype": "Select",
+      "label": "Viability Status",
+      "options": "\nViable\nMarginal\nNot Viable",
+      "in_list_view": 1
+    }
+  ],
+  "module": "Organ Donation",
+  "name": "Organs Procured",
+  "owner": "Administrator",
+  "permissions": [],
+  "track_changes": 0
+}

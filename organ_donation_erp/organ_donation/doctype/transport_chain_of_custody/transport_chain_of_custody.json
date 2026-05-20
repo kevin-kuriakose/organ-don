@@ -1,0 +1,38 @@
+{
+  "actions": [],
+  "creation": "2024-01-01 00:00:00.000000",
+  "doctype": "DocType",
+  "editable_grid": 1,
+  "engine": "InnoDB",
+  "istable": 1,
+  "field_order": [
+    "handover_time",
+    "from_person",
+    "to_person"
+  ],
+  "fields": [
+    {
+      "fieldname": "handover_time",
+      "fieldtype": "Datetime",
+      "label": "Handover Time",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "from_person",
+      "fieldtype": "Data",
+      "label": "From Person",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "to_person",
+      "fieldtype": "Data",
+      "label": "To Person",
+      "in_list_view": 1
+    }
+  ],
+  "module": "Organ Donation",
+  "name": "Transport Chain of Custody",
+  "owner": "Administrator",
+  "permissions": [],
+  "track_changes": 0
+}

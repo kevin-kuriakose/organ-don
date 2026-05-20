@@ -1,0 +1,172 @@
+{
+  "actions": [],
+  "autoname": "naming_series:",
+  "creation": "2024-01-01 00:00:00.000000",
+  "doctype": "DocType",
+  "editable_grid": 1,
+  "engine": "InnoDB",
+  "is_submittable": 1,
+  "field_order": [
+    "naming_series",
+    "recipient",
+    "organ_record",
+    "transplant_hospital",
+    "surgery_date",
+    "transplant_surgeon",
+    "surgical_team",
+    "anaesthesiologist",
+    "ot_room",
+    "surgery_duration_minutes",
+    "anastomosis_time",
+    "reperfusion_time",
+    "intraoperative_complications",
+    "blood_units_used",
+    "outcome",
+    "notes",
+    "status",
+    "amended_from"
+  ],
+  "fields": [
+    {
+      "fieldname": "naming_series",
+      "fieldtype": "Series",
+      "label": "Series",
+      "options": "TS-.YYYY.-.#####",
+      "default": "TS-.YYYY.-.#####"
+    },
+    {
+      "fieldname": "recipient",
+      "fieldtype": "Link",
+      "label": "Recipient",
+      "options": "Recipient",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "organ_record",
+      "fieldtype": "Link",
+      "label": "Organ Record",
+      "options": "Organ Record",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "transplant_hospital",
+      "fieldtype": "Link",
+      "label": "Transplant Hospital",
+      "options": "Hospital"
+    },
+    {
+      "fieldname": "surgery_date",
+      "fieldtype": "Datetime",
+      "label": "Surgery Date",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "transplant_surgeon",
+      "fieldtype": "Data",
+      "label": "Transplant Surgeon"
+    },
+    {
+      "fieldname": "surgical_team",
+      "fieldtype": "Table",
+      "label": "Surgical Team",
+      "options": "Surgical Team Member"
+    },
+    {
+      "fieldname": "anaesthesiologist",
+      "fieldtype": "Data",
+      "label": "Anaesthesiologist"
+    },
+    {
+      "fieldname": "ot_room",
+      "fieldtype": "Data",
+      "label": "OT Room"
+    },
+    {
+      "fieldname": "surgery_duration_minutes",
+      "fieldtype": "Int",
+      "label": "Surgery Duration (minutes)"
+    },
+    {
+      "fieldname": "anastomosis_time",
+      "fieldtype": "Int",
+      "label": "Anastomosis Time (minutes)"
+    },
+    {
+      "fieldname": "reperfusion_time",
+      "fieldtype": "Int",
+      "label": "Reperfusion Time (minutes)"
+    },
+    {
+      "fieldname": "intraoperative_complications",
+      "fieldtype": "Table",
+      "label": "Intraoperative Complications",
+      "options": "Intraoperative Complication"
+    },
+    {
+      "fieldname": "blood_units_used",
+      "fieldtype": "Int",
+      "label": "Blood Units Used"
+    },
+    {
+      "fieldname": "outcome",
+      "fieldtype": "Select",
+      "label": "Outcome",
+      "options": "\nSuccessful\nComplicated\nFailed",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "notes",
+      "fieldtype": "Text Editor",
+      "label": "Notes"
+    },
+    {
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "label": "Status",
+      "options": "Scheduled\nIn Progress\nCompleted\nCancelled",
+      "default": "Scheduled",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "amended_from",
+      "fieldtype": "Link",
+      "label": "Amended From",
+      "options": "Transplant Surgery",
+      "no_copy": 1,
+      "print_hide": 1,
+      "read_only": 1
+    }
+  ],
+  "module": "Organ Donation",
+  "name": "Transplant Surgery",
+  "naming_rule": "By \"Naming Series\" field",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "role": "System Manager",
+      "permlevel": 0,
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "submit": 1,
+      "cancel": 1,
+      "amend": 1,
+      "report": 1,
+      "export": 1,
+      "print": 1,
+      "email": 1,
+      "share": 1
+    },
+    {
+      "role": "All",
+      "permlevel": 0,
+      "read": 1,
+      "report": 1
+    }
+  ],
+  "title_field": "recipient",
+  "track_changes": 1
+}

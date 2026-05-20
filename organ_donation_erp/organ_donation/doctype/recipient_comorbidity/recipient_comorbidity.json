@@ -1,0 +1,39 @@
+{
+  "actions": [],
+  "creation": "2024-01-01 00:00:00.000000",
+  "doctype": "DocType",
+  "editable_grid": 1,
+  "engine": "InnoDB",
+  "istable": 1,
+  "field_order": [
+    "condition",
+    "severity",
+    "since_date"
+  ],
+  "fields": [
+    {
+      "fieldname": "condition",
+      "fieldtype": "Data",
+      "label": "Condition",
+      "in_list_view": 1,
+      "reqd": 1
+    },
+    {
+      "fieldname": "severity",
+      "fieldtype": "Select",
+      "label": "Severity",
+      "options": "\nMild\nModerate\nSevere",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "since_date",
+      "fieldtype": "Date",
+      "label": "Since Date"
+    }
+  ],
+  "module": "Organ Donation",
+  "name": "Recipient Comorbidity",
+  "owner": "Administrator",
+  "permissions": [],
+  "track_changes": 0
+}

@@ -1,0 +1,108 @@
+{
+  "actions": [],
+  "autoname": "field:center_name",
+  "creation": "2024-01-01 00:00:00.000000",
+  "doctype": "DocType",
+  "editable_grid": 1,
+  "engine": "InnoDB",
+  "field_order": [
+    "hospital",
+    "center_name",
+    "organ_programs",
+    "annual_volume",
+    "surgeon_count",
+    "coordinator_count",
+    "notto_approved",
+    "last_inspection_date",
+    "next_inspection_due",
+    "status"
+  ],
+  "fields": [
+    {
+      "fieldname": "hospital",
+      "fieldtype": "Link",
+      "label": "Hospital",
+      "options": "Hospital",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "center_name",
+      "fieldtype": "Data",
+      "label": "Center Name",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "organ_programs",
+      "fieldtype": "Table",
+      "label": "Organ Programs",
+      "options": "Transplant Center Organ Program"
+    },
+    {
+      "fieldname": "annual_volume",
+      "fieldtype": "Int",
+      "label": "Annual Volume"
+    },
+    {
+      "fieldname": "surgeon_count",
+      "fieldtype": "Int",
+      "label": "Surgeon Count"
+    },
+    {
+      "fieldname": "coordinator_count",
+      "fieldtype": "Int",
+      "label": "Coordinator Count"
+    },
+    {
+      "fieldname": "notto_approved",
+      "fieldtype": "Check",
+      "label": "NOTTO Approved"
+    },
+    {
+      "fieldname": "last_inspection_date",
+      "fieldtype": "Date",
+      "label": "Last Inspection Date"
+    },
+    {
+      "fieldname": "next_inspection_due",
+      "fieldtype": "Date",
+      "label": "Next Inspection Due"
+    },
+    {
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "label": "Status",
+      "options": "Active\nInactive\nUnder Review",
+      "default": "Active",
+      "in_list_view": 1
+    }
+  ],
+  "module": "Organ Donation",
+  "name": "Transplant Center",
+  "naming_rule": "By fieldname",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "role": "System Manager",
+      "permlevel": 0,
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "report": 1,
+      "export": 1,
+      "print": 1,
+      "email": 1,
+      "share": 1
+    },
+    {
+      "role": "All",
+      "permlevel": 0,
+      "read": 1,
+      "report": 1
+    }
+  ],
+  "title_field": "center_name",
+  "track_changes": 1
+}

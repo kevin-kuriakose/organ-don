@@ -1,0 +1,155 @@
+{
+  "actions": [],
+  "autoname": "naming_series:",
+  "creation": "2024-01-01 00:00:00.000000",
+  "doctype": "DocType",
+  "editable_grid": 1,
+  "engine": "InnoDB",
+  "field_order": [
+    "naming_series",
+    "campaign_name",
+    "type",
+    "target_audience",
+    "state",
+    "city",
+    "start_date",
+    "end_date",
+    "organizer",
+    "partner_organizations",
+    "reach_target",
+    "actual_reach",
+    "pledges_generated",
+    "coordinator",
+    "budget",
+    "expenditure",
+    "status"
+  ],
+  "fields": [
+    {
+      "fieldname": "naming_series",
+      "fieldtype": "Series",
+      "label": "Series",
+      "options": "AC-.YYYY.-.#####",
+      "default": "AC-.YYYY.-.#####"
+    },
+    {
+      "fieldname": "campaign_name",
+      "fieldtype": "Data",
+      "label": "Campaign Name",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "type",
+      "fieldtype": "Select",
+      "label": "Type",
+      "options": "\nHospital Pledge Drive\nSchool and College Program\nPublic Rally\nSocial Media Campaign\nTelevision and Radio\nIEC Material Distribution\nCME and Conference\nCorporate Pledge Drive",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "target_audience",
+      "fieldtype": "Data",
+      "label": "Target Audience"
+    },
+    {
+      "fieldname": "state",
+      "fieldtype": "Select",
+      "label": "State",
+      "options": "\nAndhra Pradesh\nBihar\nGujarat\nKarnataka\nKerala\nMadhya Pradesh\nMaharashtra\nOdisha\nPunjab\nRajasthan\nTamil Nadu\nTelangana\nUttar Pradesh\nWest Bengal\nDelhi\nOther"
+    },
+    {
+      "fieldname": "city",
+      "fieldtype": "Data",
+      "label": "City"
+    },
+    {
+      "fieldname": "start_date",
+      "fieldtype": "Date",
+      "label": "Start Date",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "end_date",
+      "fieldtype": "Date",
+      "label": "End Date"
+    },
+    {
+      "fieldname": "organizer",
+      "fieldtype": "Data",
+      "label": "Organizer"
+    },
+    {
+      "fieldname": "partner_organizations",
+      "fieldtype": "Table",
+      "label": "Partner Organizations",
+      "options": "Campaign Partner Org"
+    },
+    {
+      "fieldname": "reach_target",
+      "fieldtype": "Int",
+      "label": "Reach Target (persons)"
+    },
+    {
+      "fieldname": "actual_reach",
+      "fieldtype": "Int",
+      "label": "Actual Reach"
+    },
+    {
+      "fieldname": "pledges_generated",
+      "fieldtype": "Int",
+      "label": "Pledges Generated"
+    },
+    {
+      "fieldname": "coordinator",
+      "fieldtype": "Link",
+      "label": "Coordinator",
+      "options": "Transplant Coordinator"
+    },
+    {
+      "fieldname": "budget",
+      "fieldtype": "Currency",
+      "label": "Budget"
+    },
+    {
+      "fieldname": "expenditure",
+      "fieldtype": "Currency",
+      "label": "Expenditure"
+    },
+    {
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "label": "Status",
+      "options": "Planned\nActive\nCompleted\nCancelled",
+      "default": "Planned",
+      "in_list_view": 1
+    }
+  ],
+  "module": "Organ Donation",
+  "name": "Awareness Campaign",
+  "naming_rule": "By \"Naming Series\" field",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "role": "System Manager",
+      "permlevel": 0,
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "report": 1,
+      "export": 1,
+      "print": 1,
+      "email": 1,
+      "share": 1
+    },
+    {
+      "role": "All",
+      "permlevel": 0,
+      "read": 1,
+      "report": 1
+    }
+  ],
+  "title_field": "campaign_name",
+  "track_changes": 1
+}

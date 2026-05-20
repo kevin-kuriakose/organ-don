@@ -1,0 +1,35 @@
+{
+  "actions": [],
+  "creation": "2024-01-01 00:00:00.000000",
+  "doctype": "DocType",
+  "editable_grid": 1,
+  "engine": "InnoDB",
+  "istable": 1,
+  "field_order": [
+    "organ_type",
+    "pledge_status"
+  ],
+  "fields": [
+    {
+      "fieldname": "organ_type",
+      "fieldtype": "Select",
+      "label": "Organ Type",
+      "options": "\nKidney (Left)\nKidney (Right)\nLiver\nHeart\nLung (Left)\nLung (Right)\nBoth Lungs\nPancreas\nIntestine\nCornea (Left)\nCornea (Right)\nBone\nSkin\nHeart Valve\nBone Marrow\nBlood Vessels",
+      "in_list_view": 1,
+      "reqd": 1
+    },
+    {
+      "fieldname": "pledge_status",
+      "fieldtype": "Select",
+      "label": "Pledge Status",
+      "options": "Active\nRevoked",
+      "default": "Active",
+      "in_list_view": 1
+    }
+  ],
+  "module": "Organ Donation",
+  "name": "Donor Pledge Organ",
+  "owner": "Administrator",
+  "permissions": [],
+  "track_changes": 0
+}

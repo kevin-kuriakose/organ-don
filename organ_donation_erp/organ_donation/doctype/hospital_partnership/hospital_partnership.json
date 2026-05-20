@@ -1,0 +1,103 @@
+{
+  "actions": [],
+  "autoname": "naming_series:",
+  "creation": "2024-01-01 00:00:00.000000",
+  "doctype": "DocType",
+  "editable_grid": 1,
+  "engine": "InnoDB",
+  "field_order": [
+    "naming_series",
+    "hospital",
+    "partner_type",
+    "agreement_date",
+    "agreement_expiry",
+    "terms",
+    "coordinator_contact",
+    "data_sharing_agreement",
+    "status"
+  ],
+  "fields": [
+    {
+      "fieldname": "naming_series",
+      "fieldtype": "Series",
+      "label": "Series",
+      "options": "HP-.YYYY.-.#####",
+      "default": "HP-.YYYY.-.#####"
+    },
+    {
+      "fieldname": "hospital",
+      "fieldtype": "Link",
+      "label": "Hospital",
+      "options": "Hospital",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "partner_type",
+      "fieldtype": "Select",
+      "label": "Partner Type",
+      "options": "\nReferring\nRetrieval\nTransplant\nTissue Bank",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "agreement_date",
+      "fieldtype": "Date",
+      "label": "Agreement Date"
+    },
+    {
+      "fieldname": "agreement_expiry",
+      "fieldtype": "Date",
+      "label": "Agreement Expiry"
+    },
+    {
+      "fieldname": "terms",
+      "fieldtype": "Text Editor",
+      "label": "Terms"
+    },
+    {
+      "fieldname": "coordinator_contact",
+      "fieldtype": "Data",
+      "label": "Coordinator Contact"
+    },
+    {
+      "fieldname": "data_sharing_agreement",
+      "fieldtype": "Check",
+      "label": "Data Sharing Agreement"
+    },
+    {
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "label": "Status",
+      "options": "Active\nExpired\nTerminated",
+      "default": "Active",
+      "in_list_view": 1
+    }
+  ],
+  "module": "Organ Donation",
+  "name": "Hospital Partnership",
+  "naming_rule": "By \"Naming Series\" field",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "role": "System Manager",
+      "permlevel": 0,
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "report": 1,
+      "export": 1,
+      "print": 1,
+      "email": 1,
+      "share": 1
+    },
+    {
+      "role": "All",
+      "permlevel": 0,
+      "read": 1,
+      "report": 1
+    }
+  ],
+  "title_field": "hospital",
+  "track_changes": 1
+}

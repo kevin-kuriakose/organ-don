@@ -1,0 +1,39 @@
+{
+  "actions": [],
+  "creation": "2024-01-01 00:00:00.000000",
+  "doctype": "DocType",
+  "editable_grid": 1,
+  "engine": "InnoDB",
+  "istable": 1,
+  "field_order": [
+    "drug",
+    "dose",
+    "frequency"
+  ],
+  "fields": [
+    {
+      "fieldname": "drug",
+      "fieldtype": "Data",
+      "label": "Drug",
+      "in_list_view": 1,
+      "reqd": 1
+    },
+    {
+      "fieldname": "dose",
+      "fieldtype": "Data",
+      "label": "Dose",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "frequency",
+      "fieldtype": "Data",
+      "label": "Frequency",
+      "in_list_view": 1
+    }
+  ],
+  "module": "Organ Donation",
+  "name": "Immunosuppression Regimen",
+  "owner": "Administrator",
+  "permissions": [],
+  "track_changes": 0
+}

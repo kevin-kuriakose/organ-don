@@ -1,0 +1,39 @@
+{
+  "actions": [],
+  "creation": "2024-01-01 00:00:00.000000",
+  "doctype": "DocType",
+  "editable_grid": 1,
+  "engine": "InnoDB",
+  "istable": 1,
+  "field_order": [
+    "date",
+    "shift",
+    "on_call"
+  ],
+  "fields": [
+    {
+      "fieldname": "date",
+      "fieldtype": "Date",
+      "label": "Date",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "shift",
+      "fieldtype": "Select",
+      "label": "Shift",
+      "options": "\nMorning\nAfternoon\nNight\n24 Hour",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "on_call",
+      "fieldtype": "Check",
+      "label": "On Call",
+      "in_list_view": 1
+    }
+  ],
+  "module": "Organ Donation",
+  "name": "Coordinator On Call",
+  "owner": "Administrator",
+  "permissions": [],
+  "track_changes": 0
+}

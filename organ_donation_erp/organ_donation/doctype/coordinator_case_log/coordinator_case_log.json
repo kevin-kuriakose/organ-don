@@ -1,0 +1,96 @@
+{
+  "actions": [],
+  "autoname": "naming_series:",
+  "creation": "2024-01-01 00:00:00.000000",
+  "doctype": "DocType",
+  "editable_grid": 1,
+  "engine": "InnoDB",
+  "field_order": [
+    "naming_series",
+    "coordinator",
+    "case_reference",
+    "role_in_case",
+    "case_date",
+    "hours_spent",
+    "activities_performed",
+    "notes"
+  ],
+  "fields": [
+    {
+      "fieldname": "naming_series",
+      "fieldtype": "Series",
+      "label": "Series",
+      "options": "CCL-.YYYY.-.#####",
+      "default": "CCL-.YYYY.-.#####"
+    },
+    {
+      "fieldname": "coordinator",
+      "fieldtype": "Link",
+      "label": "Coordinator",
+      "options": "Transplant Coordinator",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "case_reference",
+      "fieldtype": "Data",
+      "label": "Case Reference",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "role_in_case",
+      "fieldtype": "Data",
+      "label": "Role in Case"
+    },
+    {
+      "fieldname": "case_date",
+      "fieldtype": "Date",
+      "label": "Case Date",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "hours_spent",
+      "fieldtype": "Float",
+      "label": "Hours Spent"
+    },
+    {
+      "fieldname": "activities_performed",
+      "fieldtype": "Table",
+      "label": "Activities Performed",
+      "options": "Coordinator Case Activity"
+    },
+    {
+      "fieldname": "notes",
+      "fieldtype": "Small Text",
+      "label": "Notes"
+    }
+  ],
+  "module": "Organ Donation",
+  "name": "Coordinator Case Log",
+  "naming_rule": "By \"Naming Series\" field",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "role": "System Manager",
+      "permlevel": 0,
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "report": 1,
+      "export": 1,
+      "print": 1,
+      "email": 1,
+      "share": 1
+    },
+    {
+      "role": "All",
+      "permlevel": 0,
+      "read": 1,
+      "report": 1
+    }
+  ],
+  "title_field": "coordinator",
+  "track_changes": 1
+}

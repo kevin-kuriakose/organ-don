@@ -1,0 +1,117 @@
+{
+  "actions": [],
+  "autoname": "naming_series:",
+  "creation": "2024-01-01 00:00:00.000000",
+  "doctype": "DocType",
+  "editable_grid": 1,
+  "engine": "InnoDB",
+  "field_order": [
+    "naming_series",
+    "donor_name",
+    "donor_type",
+    "tissue_types_donated",
+    "hospital",
+    "retrieval_date",
+    "processing_date",
+    "storage_location",
+    "expiry_date",
+    "serological_clearance",
+    "status"
+  ],
+  "fields": [
+    {
+      "fieldname": "naming_series",
+      "fieldtype": "Series",
+      "label": "Series",
+      "options": "TD-.YYYY.-.#####",
+      "default": "TD-.YYYY.-.#####"
+    },
+    {
+      "fieldname": "donor_name",
+      "fieldtype": "Data",
+      "label": "Donor Name",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "donor_type",
+      "fieldtype": "Select",
+      "label": "Donor Type",
+      "options": "\nDeceased\nLiving",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "tissue_types_donated",
+      "fieldtype": "Table",
+      "label": "Tissue Types Donated",
+      "options": "Tissue Donor Type"
+    },
+    {
+      "fieldname": "hospital",
+      "fieldtype": "Link",
+      "label": "Hospital",
+      "options": "Hospital"
+    },
+    {
+      "fieldname": "retrieval_date",
+      "fieldtype": "Date",
+      "label": "Retrieval Date"
+    },
+    {
+      "fieldname": "processing_date",
+      "fieldtype": "Date",
+      "label": "Processing Date"
+    },
+    {
+      "fieldname": "storage_location",
+      "fieldtype": "Data",
+      "label": "Storage Location"
+    },
+    {
+      "fieldname": "expiry_date",
+      "fieldtype": "Date",
+      "label": "Expiry Date",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "serological_clearance",
+      "fieldtype": "Check",
+      "label": "Serological Clearance"
+    },
+    {
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "label": "Status",
+      "options": "Processing\nCleared\nIn Storage\nDistributed\nExpired\nDiscarded",
+      "default": "Processing",
+      "in_list_view": 1
+    }
+  ],
+  "module": "Organ Donation",
+  "name": "Tissue Donor",
+  "naming_rule": "By \"Naming Series\" field",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "role": "System Manager",
+      "permlevel": 0,
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "report": 1,
+      "export": 1,
+      "print": 1,
+      "email": 1,
+      "share": 1
+    },
+    {
+      "role": "All",
+      "permlevel": 0,
+      "read": 1,
+      "report": 1
+    }
+  ],
+  "title_field": "donor_name",
+  "track_changes": 1
+}

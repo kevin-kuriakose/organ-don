@@ -1,0 +1,157 @@
+{
+  "actions": [],
+  "autoname": "naming_series:",
+  "creation": "2024-01-01 00:00:00.000000",
+  "doctype": "DocType",
+  "editable_grid": 1,
+  "engine": "InnoDB",
+  "field_order": [
+    "naming_series",
+    "deceased_donor",
+    "next_of_kin_name",
+    "relationship",
+    "contact",
+    "consent_counsellor",
+    "counselling_date",
+    "counselling_duration_minutes",
+    "consent_decision",
+    "organs_consented",
+    "consent_form_signed",
+    "witness_name",
+    "legal_documentation_complete",
+    "notes",
+    "status",
+    "amended_from"
+  ],
+  "fields": [
+    {
+      "fieldname": "naming_series",
+      "fieldtype": "Series",
+      "label": "Series",
+      "options": "FCR-.YYYY.-.#####",
+      "default": "FCR-.YYYY.-.#####"
+    },
+    {
+      "fieldname": "deceased_donor",
+      "fieldtype": "Link",
+      "label": "Deceased Donor",
+      "options": "Deceased Donor",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "next_of_kin_name",
+      "fieldtype": "Data",
+      "label": "Next of Kin Name",
+      "reqd": 1
+    },
+    {
+      "fieldname": "relationship",
+      "fieldtype": "Data",
+      "label": "Relationship"
+    },
+    {
+      "fieldname": "contact",
+      "fieldtype": "Data",
+      "label": "Contact"
+    },
+    {
+      "fieldname": "consent_counsellor",
+      "fieldtype": "Link",
+      "label": "Consent Counsellor",
+      "options": "Transplant Coordinator"
+    },
+    {
+      "fieldname": "counselling_date",
+      "fieldtype": "Datetime",
+      "label": "Counselling Date",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "counselling_duration_minutes",
+      "fieldtype": "Int",
+      "label": "Counselling Duration (minutes)"
+    },
+    {
+      "fieldname": "consent_decision",
+      "fieldtype": "Select",
+      "label": "Consent Decision",
+      "options": "\nConsented\nRefused\nPartial\nPending",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "organs_consented",
+      "fieldtype": "Table",
+      "label": "Organs Consented",
+      "options": "Family Consent Organ"
+    },
+    {
+      "fieldname": "consent_form_signed",
+      "fieldtype": "Check",
+      "label": "Consent Form Signed"
+    },
+    {
+      "fieldname": "witness_name",
+      "fieldtype": "Data",
+      "label": "Witness Name"
+    },
+    {
+      "fieldname": "legal_documentation_complete",
+      "fieldtype": "Check",
+      "label": "Legal Documentation Complete"
+    },
+    {
+      "fieldname": "notes",
+      "fieldtype": "Text Editor",
+      "label": "Notes"
+    },
+    {
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "label": "Status",
+      "options": "Draft\nSubmitted\nFiled",
+      "default": "Draft",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "amended_from",
+      "fieldtype": "Link",
+      "label": "Amended From",
+      "options": "Family Consent Record",
+      "no_copy": 1,
+      "print_hide": 1,
+      "read_only": 1
+    }
+  ],
+  "module": "Organ Donation",
+  "name": "Family Consent Record",
+  "naming_rule": "By \"Naming Series\" field",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "role": "System Manager",
+      "permlevel": 0,
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "submit": 1,
+      "cancel": 1,
+      "amend": 1,
+      "report": 1,
+      "export": 1,
+      "print": 1,
+      "email": 1,
+      "share": 1
+    },
+    {
+      "role": "All",
+      "permlevel": 0,
+      "read": 1,
+      "report": 1
+    }
+  ],
+  "title_field": "deceased_donor",
+  "track_changes": 1,
+  "is_submittable": 1
+}

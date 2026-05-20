@@ -1,0 +1,37 @@
+{
+  "actions": [],
+  "creation": "2024-01-01 00:00:00.000000",
+  "doctype": "DocType",
+  "editable_grid": 1,
+  "engine": "InnoDB",
+  "istable": 1,
+  "field_order": [
+    "time",
+    "temperature",
+    "humidity"
+  ],
+  "fields": [
+    {
+      "fieldname": "time",
+      "fieldtype": "Datetime",
+      "label": "Time",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "temperature",
+      "fieldtype": "Float",
+      "label": "Temperature (C)",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "humidity",
+      "fieldtype": "Float",
+      "label": "Humidity %"
+    }
+  ],
+  "module": "Organ Donation",
+  "name": "Transport Temperature Log",
+  "owner": "Administrator",
+  "permissions": [],
+  "track_changes": 0
+}

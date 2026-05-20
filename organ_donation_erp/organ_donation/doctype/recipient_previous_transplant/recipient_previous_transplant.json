@@ -1,0 +1,46 @@
+{
+  "actions": [],
+  "creation": "2024-01-01 00:00:00.000000",
+  "doctype": "DocType",
+  "editable_grid": 1,
+  "engine": "InnoDB",
+  "istable": 1,
+  "field_order": [
+    "organ",
+    "date",
+    "hospital",
+    "outcome"
+  ],
+  "fields": [
+    {
+      "fieldname": "organ",
+      "fieldtype": "Data",
+      "label": "Organ",
+      "in_list_view": 1,
+      "reqd": 1
+    },
+    {
+      "fieldname": "date",
+      "fieldtype": "Date",
+      "label": "Date",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "hospital",
+      "fieldtype": "Data",
+      "label": "Hospital"
+    },
+    {
+      "fieldname": "outcome",
+      "fieldtype": "Select",
+      "label": "Outcome",
+      "options": "\nSuccessful\nGraft Failure\nPatient Death",
+      "in_list_view": 1
+    }
+  ],
+  "module": "Organ Donation",
+  "name": "Recipient Previous Transplant",
+  "owner": "Administrator",
+  "permissions": [],
+  "track_changes": 0
+}

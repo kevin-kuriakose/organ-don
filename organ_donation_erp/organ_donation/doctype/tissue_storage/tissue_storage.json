@@ -1,0 +1,98 @@
+{
+  "actions": [],
+  "autoname": "naming_series:",
+  "creation": "2024-01-01 00:00:00.000000",
+  "doctype": "DocType",
+  "editable_grid": 1,
+  "engine": "InnoDB",
+  "field_order": [
+    "naming_series",
+    "tissue_type",
+    "storage_unit",
+    "temperature_maintained",
+    "quantity_in_stock",
+    "expiry_tracking",
+    "last_audit_date",
+    "status"
+  ],
+  "fields": [
+    {
+      "fieldname": "naming_series",
+      "fieldtype": "Series",
+      "label": "Series",
+      "options": "TSTOR-.YYYY.-.#####",
+      "default": "TSTOR-.YYYY.-.#####"
+    },
+    {
+      "fieldname": "tissue_type",
+      "fieldtype": "Select",
+      "label": "Tissue Type",
+      "options": "\nCornea\nBone\nSkin\nHeart Valve\nTendons\nAmniotic Membrane\nCartilage\nBlood Vessels\nNerve Graft",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "storage_unit",
+      "fieldtype": "Data",
+      "label": "Storage Unit",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "temperature_maintained",
+      "fieldtype": "Float",
+      "label": "Temperature Maintained (C)"
+    },
+    {
+      "fieldname": "quantity_in_stock",
+      "fieldtype": "Int",
+      "label": "Quantity in Stock",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "expiry_tracking",
+      "fieldtype": "Table",
+      "label": "Expiry Tracking",
+      "options": "Tissue Storage Batch"
+    },
+    {
+      "fieldname": "last_audit_date",
+      "fieldtype": "Date",
+      "label": "Last Audit Date"
+    },
+    {
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "label": "Status",
+      "options": "Active\nMaintenance\nDecommissioned",
+      "default": "Active",
+      "in_list_view": 1
+    }
+  ],
+  "module": "Organ Donation",
+  "name": "Tissue Storage",
+  "naming_rule": "By \"Naming Series\" field",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "role": "System Manager",
+      "permlevel": 0,
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "report": 1,
+      "export": 1,
+      "print": 1,
+      "email": 1,
+      "share": 1
+    },
+    {
+      "role": "All",
+      "permlevel": 0,
+      "read": 1,
+      "report": 1
+    }
+  ],
+  "title_field": "tissue_type",
+  "track_changes": 1
+}

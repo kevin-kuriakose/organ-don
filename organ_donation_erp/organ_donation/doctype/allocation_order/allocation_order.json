@@ -1,0 +1,133 @@
+{
+  "actions": [],
+  "autoname": "naming_series:",
+  "creation": "2024-01-01 00:00:00.000000",
+  "doctype": "DocType",
+  "editable_grid": 1,
+  "engine": "InnoDB",
+  "is_submittable": 1,
+  "field_order": [
+    "naming_series",
+    "organ_record",
+    "procurement_case",
+    "allocation_algorithm",
+    "priority_list",
+    "final_recipient",
+    "final_hospital",
+    "allocation_approved_by",
+    "allocation_date",
+    "notto_allocation_reference",
+    "status",
+    "amended_from"
+  ],
+  "fields": [
+    {
+      "fieldname": "naming_series",
+      "fieldtype": "Series",
+      "label": "Series",
+      "options": "AO-.YYYY.-.#####",
+      "default": "AO-.YYYY.-.#####"
+    },
+    {
+      "fieldname": "organ_record",
+      "fieldtype": "Link",
+      "label": "Organ Record",
+      "options": "Organ Record",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "procurement_case",
+      "fieldtype": "Link",
+      "label": "Procurement Case",
+      "options": "Procurement Case"
+    },
+    {
+      "fieldname": "allocation_algorithm",
+      "fieldtype": "Select",
+      "label": "Allocation Algorithm",
+      "options": "\nNOTTO\nSOTTO\nManual"
+    },
+    {
+      "fieldname": "priority_list",
+      "fieldtype": "Table",
+      "label": "Priority List",
+      "options": "Allocation Priority List"
+    },
+    {
+      "fieldname": "final_recipient",
+      "fieldtype": "Link",
+      "label": "Final Recipient",
+      "options": "Recipient",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "final_hospital",
+      "fieldtype": "Link",
+      "label": "Final Hospital",
+      "options": "Hospital"
+    },
+    {
+      "fieldname": "allocation_approved_by",
+      "fieldtype": "Data",
+      "label": "Approved By"
+    },
+    {
+      "fieldname": "allocation_date",
+      "fieldtype": "Datetime",
+      "label": "Allocation Date"
+    },
+    {
+      "fieldname": "notto_allocation_reference",
+      "fieldtype": "Data",
+      "label": "NOTTO Allocation Reference"
+    },
+    {
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "label": "Status",
+      "options": "Draft\nApproved\nCommunicated\nAccepted\nCompleted",
+      "default": "Draft",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "amended_from",
+      "fieldtype": "Link",
+      "label": "Amended From",
+      "options": "Allocation Order",
+      "no_copy": 1,
+      "print_hide": 1,
+      "read_only": 1
+    }
+  ],
+  "module": "Organ Donation",
+  "name": "Allocation Order",
+  "naming_rule": "By \"Naming Series\" field",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "role": "System Manager",
+      "permlevel": 0,
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "submit": 1,
+      "cancel": 1,
+      "amend": 1,
+      "report": 1,
+      "export": 1,
+      "print": 1,
+      "email": 1,
+      "share": 1
+    },
+    {
+      "role": "All",
+      "permlevel": 0,
+      "read": 1,
+      "report": 1
+    }
+  ],
+  "title_field": "organ_record",
+  "track_changes": 1
+}

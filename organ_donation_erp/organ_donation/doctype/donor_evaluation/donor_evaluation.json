@@ -1,0 +1,179 @@
+{
+  "actions": [],
+  "autoname": "naming_series:",
+  "creation": "2024-01-01 00:00:00.000000",
+  "doctype": "DocType",
+  "editable_grid": 1,
+  "engine": "InnoDB",
+  "field_order": [
+    "naming_series",
+    "deceased_donor",
+    "living_donor",
+    "evaluation_date",
+    "evaluating_doctor",
+    "organ_type",
+    "haemodynamic_stability",
+    "urine_output",
+    "oxygenation",
+    "lab_results",
+    "imaging_reports",
+    "serology_results",
+    "hiv_screen",
+    "hbsag_screen",
+    "hcv_screen",
+    "cmv_screen",
+    "ebv_screen",
+    "donor_classification",
+    "evaluation_outcome",
+    "notes"
+  ],
+  "fields": [
+    {
+      "fieldname": "naming_series",
+      "fieldtype": "Series",
+      "label": "Series",
+      "options": "DE-.YYYY.-.#####",
+      "default": "DE-.YYYY.-.#####"
+    },
+    {
+      "fieldname": "deceased_donor",
+      "fieldtype": "Link",
+      "label": "Deceased Donor",
+      "options": "Deceased Donor"
+    },
+    {
+      "fieldname": "living_donor",
+      "fieldtype": "Link",
+      "label": "Living Donor",
+      "options": "Living Donor"
+    },
+    {
+      "fieldname": "evaluation_date",
+      "fieldtype": "Date",
+      "label": "Evaluation Date",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "evaluating_doctor",
+      "fieldtype": "Data",
+      "label": "Evaluating Doctor"
+    },
+    {
+      "fieldname": "organ_type",
+      "fieldtype": "Select",
+      "label": "Organ Type",
+      "options": "\nKidney\nLiver\nHeart\nLung\nPancreas\nIntestine\nCornea\nBone\nSkin\nHeart Valve",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "haemodynamic_stability",
+      "fieldtype": "Select",
+      "label": "Haemodynamic Stability",
+      "options": "\nStable\nUnstable\nBorderline"
+    },
+    {
+      "fieldname": "urine_output",
+      "fieldtype": "Data",
+      "label": "Urine Output (ml/hr)"
+    },
+    {
+      "fieldname": "oxygenation",
+      "fieldtype": "Data",
+      "label": "Oxygenation (PaO2/FiO2)"
+    },
+    {
+      "fieldname": "lab_results",
+      "fieldtype": "Table",
+      "label": "Lab Results",
+      "options": "Donor Evaluation Lab Result"
+    },
+    {
+      "fieldname": "imaging_reports",
+      "fieldtype": "Table",
+      "label": "Imaging Reports",
+      "options": "Donor Evaluation Imaging"
+    },
+    {
+      "fieldname": "serology_results",
+      "fieldtype": "Table",
+      "label": "Serology Results",
+      "options": "Donor Evaluation Serology"
+    },
+    {
+      "fieldname": "hiv_screen",
+      "fieldtype": "Select",
+      "label": "HIV Screen",
+      "options": "\nNegative\nPositive\nPending"
+    },
+    {
+      "fieldname": "hbsag_screen",
+      "fieldtype": "Select",
+      "label": "HBsAg Screen",
+      "options": "\nNegative\nPositive\nPending"
+    },
+    {
+      "fieldname": "hcv_screen",
+      "fieldtype": "Select",
+      "label": "HCV Screen",
+      "options": "\nNegative\nPositive\nPending"
+    },
+    {
+      "fieldname": "cmv_screen",
+      "fieldtype": "Select",
+      "label": "CMV Screen",
+      "options": "\nNegative\nPositive\nPending"
+    },
+    {
+      "fieldname": "ebv_screen",
+      "fieldtype": "Select",
+      "label": "EBV Screen",
+      "options": "\nNegative\nPositive\nPending"
+    },
+    {
+      "fieldname": "donor_classification",
+      "fieldtype": "Select",
+      "label": "Donor Classification",
+      "options": "\nStandard Criteria Donor\nExtended Criteria Donor"
+    },
+    {
+      "fieldname": "evaluation_outcome",
+      "fieldtype": "Select",
+      "label": "Evaluation Outcome",
+      "options": "\nSuitable\nUnsuitable\nBorderline",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "notes",
+      "fieldtype": "Text Editor",
+      "label": "Notes"
+    }
+  ],
+  "module": "Organ Donation",
+  "name": "Donor Evaluation",
+  "naming_rule": "By \"Naming Series\" field",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "role": "System Manager",
+      "permlevel": 0,
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "report": 1,
+      "export": 1,
+      "print": 1,
+      "email": 1,
+      "share": 1
+    },
+    {
+      "role": "All",
+      "permlevel": 0,
+      "read": 1,
+      "report": 1
+    }
+  ],
+  "title_field": "organ_type",
+  "track_changes": 1
+}

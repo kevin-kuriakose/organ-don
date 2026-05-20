@@ -1,0 +1,176 @@
+{
+  "actions": [],
+  "autoname": "field:hospital_name",
+  "creation": "2024-01-01 00:00:00.000000",
+  "doctype": "DocType",
+  "editable_grid": 1,
+  "engine": "InnoDB",
+  "field_order": [
+    "hospital_name",
+    "hospital_code",
+    "type",
+    "registration_number",
+    "notto_registration_number",
+    "thota_registration_status",
+    "section_address",
+    "address",
+    "state",
+    "city",
+    "section_contact",
+    "contact_person",
+    "phone",
+    "email",
+    "section_capacity",
+    "beds_count",
+    "icu_beds_count",
+    "transplant_facilities",
+    "retrieval_facility",
+    "transplant_coordinator_name",
+    "status"
+  ],
+  "fields": [
+    {
+      "fieldname": "hospital_name",
+      "fieldtype": "Data",
+      "label": "Hospital Name",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "hospital_code",
+      "fieldtype": "Data",
+      "label": "Hospital Code",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "type",
+      "fieldtype": "Select",
+      "label": "Type",
+      "options": "\nGovernment Medical College\nPrivate Hospital\nTrust Hospital\nAutonomous Institute\nAIIMS\nPGIMER\nArmed Forces Hospital",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "registration_number",
+      "fieldtype": "Data",
+      "label": "Registration Number"
+    },
+    {
+      "fieldname": "notto_registration_number",
+      "fieldtype": "Data",
+      "label": "NOTTO Registration Number"
+    },
+    {
+      "fieldname": "thota_registration_status",
+      "fieldtype": "Select",
+      "label": "THOTA Registration Status",
+      "options": "\nRegistered\nPending\nExpired\nNot Registered"
+    },
+    {
+      "fieldname": "section_address",
+      "fieldtype": "Section Break",
+      "label": "Address"
+    },
+    {
+      "fieldname": "address",
+      "fieldtype": "Small Text",
+      "label": "Address"
+    },
+    {
+      "fieldname": "state",
+      "fieldtype": "Select",
+      "label": "State",
+      "options": "\nAndhra Pradesh\nArunachal Pradesh\nAssam\nBihar\nChhattisgarh\nGoa\nGujarat\nHaryana\nHimachal Pradesh\nJharkhand\nKarnataka\nKerala\nMadhya Pradesh\nMaharashtra\nManipur\nMeghalaya\nMizoram\nNagaland\nOdisha\nPunjab\nRajasthan\nSikkim\nTamil Nadu\nTelangana\nTripura\nUttar Pradesh\nUttarakhand\nWest Bengal\nDelhi\nJammu and Kashmir\nLadakh\nPuducherry\nChandigarh\nDadra and Nagar Haveli\nDaman and Diu\nLakshadweep\nAndaman and Nicobar Islands"
+    },
+    {
+      "fieldname": "city",
+      "fieldtype": "Data",
+      "label": "City"
+    },
+    {
+      "fieldname": "section_contact",
+      "fieldtype": "Section Break",
+      "label": "Contact"
+    },
+    {
+      "fieldname": "contact_person",
+      "fieldtype": "Data",
+      "label": "Contact Person"
+    },
+    {
+      "fieldname": "phone",
+      "fieldtype": "Data",
+      "label": "Phone"
+    },
+    {
+      "fieldname": "email",
+      "fieldtype": "Data",
+      "label": "Email"
+    },
+    {
+      "fieldname": "section_capacity",
+      "fieldtype": "Section Break",
+      "label": "Capacity"
+    },
+    {
+      "fieldname": "beds_count",
+      "fieldtype": "Int",
+      "label": "Total Beds"
+    },
+    {
+      "fieldname": "icu_beds_count",
+      "fieldtype": "Int",
+      "label": "ICU Beds"
+    },
+    {
+      "fieldname": "transplant_facilities",
+      "fieldtype": "Table",
+      "label": "Transplant Facilities",
+      "options": "Hospital Transplant Facility"
+    },
+    {
+      "fieldname": "retrieval_facility",
+      "fieldtype": "Check",
+      "label": "Retrieval Facility Available"
+    },
+    {
+      "fieldname": "transplant_coordinator_name",
+      "fieldtype": "Data",
+      "label": "Transplant Coordinator Name"
+    },
+    {
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "label": "Status",
+      "options": "Active\nInactive\nSuspended",
+      "default": "Active",
+      "in_list_view": 1
+    }
+  ],
+  "module": "Organ Donation",
+  "name": "Hospital",
+  "naming_rule": "By fieldname",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "role": "System Manager",
+      "permlevel": 0,
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "report": 1,
+      "export": 1,
+      "print": 1,
+      "email": 1,
+      "share": 1
+    },
+    {
+      "role": "All",
+      "permlevel": 0,
+      "read": 1,
+      "report": 1
+    }
+  ],
+  "title_field": "hospital_name",
+  "track_changes": 1
+}

@@ -1,0 +1,225 @@
+{
+  "actions": [],
+  "autoname": "naming_series:",
+  "creation": "2024-01-01 00:00:00.000000",
+  "doctype": "DocType",
+  "editable_grid": 1,
+  "engine": "InnoDB",
+  "field_order": [
+    "naming_series",
+    "patient_name",
+    "date_of_birth",
+    "gender",
+    "blood_group",
+    "abo_type",
+    "hla_a",
+    "hla_b",
+    "hla_c",
+    "hla_dr",
+    "hla_dq",
+    "hla_dp",
+    "pra_percent",
+    "meld_score",
+    "peld_score",
+    "gfr",
+    "waiting_since_date",
+    "diagnosis",
+    "organ_required",
+    "urgency_category",
+    "hospital_registered",
+    "transplant_surgeon",
+    "transplant_coordinator",
+    "insurance_status",
+    "government_scheme_flag",
+    "notto_waitlist_number",
+    "sotto_waitlist_number",
+    "status"
+  ],
+  "fields": [
+    {
+      "fieldname": "naming_series",
+      "fieldtype": "Series",
+      "label": "Series",
+      "options": "RCP-.YYYY.-.#####",
+      "default": "RCP-.YYYY.-.#####"
+    },
+    {
+      "fieldname": "patient_name",
+      "fieldtype": "Data",
+      "label": "Patient Name",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "date_of_birth",
+      "fieldtype": "Date",
+      "label": "Date of Birth"
+    },
+    {
+      "fieldname": "gender",
+      "fieldtype": "Select",
+      "label": "Gender",
+      "options": "\nMale\nFemale\nOther"
+    },
+    {
+      "fieldname": "blood_group",
+      "fieldtype": "Select",
+      "label": "Blood Group",
+      "options": "\nA Positive\nA Negative\nB Positive\nB Negative\nAB Positive\nAB Negative\nO Positive\nO Negative"
+    },
+    {
+      "fieldname": "abo_type",
+      "fieldtype": "Select",
+      "label": "ABO Type",
+      "options": "\nA\nB\nAB\nO"
+    },
+    {
+      "fieldname": "hla_a",
+      "fieldtype": "Data",
+      "label": "HLA-A"
+    },
+    {
+      "fieldname": "hla_b",
+      "fieldtype": "Data",
+      "label": "HLA-B"
+    },
+    {
+      "fieldname": "hla_c",
+      "fieldtype": "Data",
+      "label": "HLA-C"
+    },
+    {
+      "fieldname": "hla_dr",
+      "fieldtype": "Data",
+      "label": "HLA-DR"
+    },
+    {
+      "fieldname": "hla_dq",
+      "fieldtype": "Data",
+      "label": "HLA-DQ"
+    },
+    {
+      "fieldname": "hla_dp",
+      "fieldtype": "Data",
+      "label": "HLA-DP"
+    },
+    {
+      "fieldname": "pra_percent",
+      "fieldtype": "Float",
+      "label": "PRA %"
+    },
+    {
+      "fieldname": "meld_score",
+      "fieldtype": "Float",
+      "label": "MELD Score"
+    },
+    {
+      "fieldname": "peld_score",
+      "fieldtype": "Float",
+      "label": "PELD Score"
+    },
+    {
+      "fieldname": "gfr",
+      "fieldtype": "Float",
+      "label": "GFR"
+    },
+    {
+      "fieldname": "waiting_since_date",
+      "fieldtype": "Date",
+      "label": "Waiting Since Date",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "diagnosis",
+      "fieldtype": "Data",
+      "label": "Diagnosis"
+    },
+    {
+      "fieldname": "organ_required",
+      "fieldtype": "Select",
+      "label": "Organ Required",
+      "options": "\nKidney\nLiver\nHeart\nLung\nPancreas\nIntestine\nCornea\nBone Marrow",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "urgency_category",
+      "fieldtype": "Select",
+      "label": "Urgency Category",
+      "options": "\nSuper Urgent\nUrgent\nSemi Urgent\nElective",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "hospital_registered",
+      "fieldtype": "Link",
+      "label": "Hospital Registered",
+      "options": "Hospital"
+    },
+    {
+      "fieldname": "transplant_surgeon",
+      "fieldtype": "Data",
+      "label": "Transplant Surgeon"
+    },
+    {
+      "fieldname": "transplant_coordinator",
+      "fieldtype": "Link",
+      "label": "Transplant Coordinator",
+      "options": "Transplant Coordinator"
+    },
+    {
+      "fieldname": "insurance_status",
+      "fieldtype": "Select",
+      "label": "Insurance Status",
+      "options": "\nInsured\nUninsured\nGovernment Scheme"
+    },
+    {
+      "fieldname": "government_scheme_flag",
+      "fieldtype": "Check",
+      "label": "Government Scheme"
+    },
+    {
+      "fieldname": "notto_waitlist_number",
+      "fieldtype": "Data",
+      "label": "NOTTO Waitlist Number"
+    },
+    {
+      "fieldname": "sotto_waitlist_number",
+      "fieldtype": "Data",
+      "label": "SOTTO Waitlist Number"
+    },
+    {
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "label": "Status",
+      "options": "Active\nOn Hold\nTransplanted\nDeceased\nWithdrawn",
+      "default": "Active",
+      "in_list_view": 1
+    }
+  ],
+  "module": "Organ Donation",
+  "name": "Recipient",
+  "naming_rule": "By \"Naming Series\" field",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "role": "System Manager",
+      "permlevel": 0,
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "report": 1,
+      "export": 1,
+      "print": 1,
+      "email": 1,
+      "share": 1
+    },
+    {
+      "role": "All",
+      "permlevel": 0,
+      "read": 1,
+      "report": 1
+    }
+  ],
+  "title_field": "patient_name",
+  "track_changes": 1
+}

@@ -1,0 +1,121 @@
+{
+  "actions": [],
+  "autoname": "naming_series:",
+  "creation": "2024-01-01 00:00:00.000000",
+  "doctype": "DocType",
+  "editable_grid": 1,
+  "engine": "InnoDB",
+  "field_order": [
+    "naming_series",
+    "event_name",
+    "type",
+    "date",
+    "venue",
+    "hospital_or_institution",
+    "speakers",
+    "attendee_count",
+    "pledges_collected",
+    "media_coverage",
+    "feedback_score",
+    "notes"
+  ],
+  "fields": [
+    {
+      "fieldname": "naming_series",
+      "fieldtype": "Series",
+      "label": "Series",
+      "options": "PAE-.YYYY.-.#####",
+      "default": "PAE-.YYYY.-.#####"
+    },
+    {
+      "fieldname": "event_name",
+      "fieldtype": "Data",
+      "label": "Event Name",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "type",
+      "fieldtype": "Select",
+      "label": "Type",
+      "options": "\nCME\nSeminar\nWorkshop\nRally\nStreet Play\nExhibition",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "date",
+      "fieldtype": "Date",
+      "label": "Date",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "venue",
+      "fieldtype": "Data",
+      "label": "Venue"
+    },
+    {
+      "fieldname": "hospital_or_institution",
+      "fieldtype": "Data",
+      "label": "Hospital or Institution"
+    },
+    {
+      "fieldname": "speakers",
+      "fieldtype": "Table",
+      "label": "Speakers",
+      "options": "Event Speaker"
+    },
+    {
+      "fieldname": "attendee_count",
+      "fieldtype": "Int",
+      "label": "Attendee Count"
+    },
+    {
+      "fieldname": "pledges_collected",
+      "fieldtype": "Int",
+      "label": "Pledges Collected",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "media_coverage",
+      "fieldtype": "Check",
+      "label": "Media Coverage"
+    },
+    {
+      "fieldname": "feedback_score",
+      "fieldtype": "Float",
+      "label": "Feedback Score"
+    },
+    {
+      "fieldname": "notes",
+      "fieldtype": "Small Text",
+      "label": "Notes"
+    }
+  ],
+  "module": "Organ Donation",
+  "name": "Public Awareness Event",
+  "naming_rule": "By \"Naming Series\" field",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "role": "System Manager",
+      "permlevel": 0,
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "report": 1,
+      "export": 1,
+      "print": 1,
+      "email": 1,
+      "share": 1
+    },
+    {
+      "role": "All",
+      "permlevel": 0,
+      "read": 1,
+      "report": 1
+    }
+  ],
+  "title_field": "event_name",
+  "track_changes": 1
+}

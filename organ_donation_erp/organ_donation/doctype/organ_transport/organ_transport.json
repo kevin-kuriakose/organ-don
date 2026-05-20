@@ -1,0 +1,154 @@
+{
+  "actions": [],
+  "autoname": "naming_series:",
+  "creation": "2024-01-01 00:00:00.000000",
+  "doctype": "DocType",
+  "editable_grid": 1,
+  "engine": "InnoDB",
+  "field_order": [
+    "naming_series",
+    "organ_record",
+    "origin_hospital",
+    "destination_hospital",
+    "transport_mode",
+    "departure_date",
+    "estimated_arrival",
+    "actual_arrival",
+    "transport_team",
+    "police_escort_arranged",
+    "traffic_control_notified",
+    "temperature_log",
+    "chain_of_custody",
+    "transport_outcome",
+    "delay_reason",
+    "status"
+  ],
+  "fields": [
+    {
+      "fieldname": "naming_series",
+      "fieldtype": "Series",
+      "label": "Series",
+      "options": "OT-.YYYY.-.#####",
+      "default": "OT-.YYYY.-.#####"
+    },
+    {
+      "fieldname": "organ_record",
+      "fieldtype": "Link",
+      "label": "Organ Record",
+      "options": "Organ Record",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "origin_hospital",
+      "fieldtype": "Link",
+      "label": "Origin Hospital",
+      "options": "Hospital",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "destination_hospital",
+      "fieldtype": "Link",
+      "label": "Destination Hospital",
+      "options": "Hospital",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "transport_mode",
+      "fieldtype": "Select",
+      "label": "Transport Mode",
+      "options": "\nAir Ambulance\nRoad Ambulance\nGreen Corridor\nCommercial Flight\nHelicopter\nTrain (Special)",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "departure_date",
+      "fieldtype": "Datetime",
+      "label": "Departure Date"
+    },
+    {
+      "fieldname": "estimated_arrival",
+      "fieldtype": "Datetime",
+      "label": "Estimated Arrival"
+    },
+    {
+      "fieldname": "actual_arrival",
+      "fieldtype": "Datetime",
+      "label": "Actual Arrival"
+    },
+    {
+      "fieldname": "transport_team",
+      "fieldtype": "Table",
+      "label": "Transport Team",
+      "options": "Transport Team Member"
+    },
+    {
+      "fieldname": "police_escort_arranged",
+      "fieldtype": "Check",
+      "label": "Police Escort Arranged"
+    },
+    {
+      "fieldname": "traffic_control_notified",
+      "fieldtype": "Check",
+      "label": "Traffic Control Notified"
+    },
+    {
+      "fieldname": "temperature_log",
+      "fieldtype": "Table",
+      "label": "Temperature Log",
+      "options": "Transport Temperature Log"
+    },
+    {
+      "fieldname": "chain_of_custody",
+      "fieldtype": "Table",
+      "label": "Chain of Custody",
+      "options": "Transport Chain of Custody"
+    },
+    {
+      "fieldname": "transport_outcome",
+      "fieldtype": "Select",
+      "label": "Transport Outcome",
+      "options": "\nSuccessful\nDelayed\nCompromised",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "delay_reason",
+      "fieldtype": "Data",
+      "label": "Delay Reason"
+    },
+    {
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "label": "Status",
+      "options": "Planned\nIn Transit\nDelivered\nCancelled",
+      "default": "Planned",
+      "in_list_view": 1
+    }
+  ],
+  "module": "Organ Donation",
+  "name": "Organ Transport",
+  "naming_rule": "By \"Naming Series\" field",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "role": "System Manager",
+      "permlevel": 0,
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "report": 1,
+      "export": 1,
+      "print": 1,
+      "email": 1,
+      "share": 1
+    },
+    {
+      "role": "All",
+      "permlevel": 0,
+      "read": 1,
+      "report": 1
+    }
+  ],
+  "title_field": "organ_record",
+  "track_changes": 1
+}

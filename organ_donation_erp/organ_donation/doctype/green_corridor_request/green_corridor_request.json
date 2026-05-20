@@ -1,0 +1,141 @@
+{
+  "actions": [],
+  "autoname": "naming_series:",
+  "creation": "2024-01-01 00:00:00.000000",
+  "doctype": "DocType",
+  "editable_grid": 1,
+  "engine": "InnoDB",
+  "is_submittable": 1,
+  "field_order": [
+    "naming_series",
+    "transport_record",
+    "origin_city",
+    "destination_city",
+    "route_plan",
+    "police_contact",
+    "traffic_authority_contact",
+    "request_time",
+    "approval_time",
+    "corridor_activated_time",
+    "activation_authority",
+    "total_time_saved_minutes",
+    "status",
+    "amended_from"
+  ],
+  "fields": [
+    {
+      "fieldname": "naming_series",
+      "fieldtype": "Series",
+      "label": "Series",
+      "options": "GCR-.YYYY.-.#####",
+      "default": "GCR-.YYYY.-.#####"
+    },
+    {
+      "fieldname": "transport_record",
+      "fieldtype": "Link",
+      "label": "Transport Record",
+      "options": "Organ Transport",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "origin_city",
+      "fieldtype": "Data",
+      "label": "Origin City",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "destination_city",
+      "fieldtype": "Data",
+      "label": "Destination City",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "route_plan",
+      "fieldtype": "Small Text",
+      "label": "Route Plan"
+    },
+    {
+      "fieldname": "police_contact",
+      "fieldtype": "Data",
+      "label": "Police Contact"
+    },
+    {
+      "fieldname": "traffic_authority_contact",
+      "fieldtype": "Data",
+      "label": "Traffic Authority Contact"
+    },
+    {
+      "fieldname": "request_time",
+      "fieldtype": "Datetime",
+      "label": "Request Time"
+    },
+    {
+      "fieldname": "approval_time",
+      "fieldtype": "Datetime",
+      "label": "Approval Time"
+    },
+    {
+      "fieldname": "corridor_activated_time",
+      "fieldtype": "Datetime",
+      "label": "Corridor Activated Time"
+    },
+    {
+      "fieldname": "activation_authority",
+      "fieldtype": "Data",
+      "label": "Activation Authority"
+    },
+    {
+      "fieldname": "total_time_saved_minutes",
+      "fieldtype": "Int",
+      "label": "Total Time Saved (minutes)"
+    },
+    {
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "label": "Status",
+      "options": "Requested\nApproved\nActive\nCompleted",
+      "default": "Requested",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "amended_from",
+      "fieldtype": "Link",
+      "label": "Amended From",
+      "options": "Green Corridor Request",
+      "no_copy": 1,
+      "print_hide": 1,
+      "read_only": 1
+    }
+  ],
+  "module": "Organ Donation",
+  "name": "Green Corridor Request",
+  "naming_rule": "By \"Naming Series\" field",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "role": "System Manager",
+      "permlevel": 0,
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "submit": 1,
+      "cancel": 1,
+      "amend": 1,
+      "report": 1,
+      "export": 1,
+      "print": 1,
+      "email": 1,
+      "share": 1
+    },
+    {
+      "role": "All",
+      "permlevel": 0,
+      "read": 1,
+      "report": 1
+    }
+  ],
+  "title_field": "origin_city",
+  "track_changes": 1
+}

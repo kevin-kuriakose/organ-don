@@ -1,0 +1,40 @@
+{
+  "actions": [],
+  "creation": "2024-01-01 00:00:00.000000",
+  "doctype": "DocType",
+  "editable_grid": 1,
+  "engine": "InnoDB",
+  "istable": 1,
+  "field_order": [
+    "organ_type",
+    "facility_available",
+    "accreditation_status"
+  ],
+  "fields": [
+    {
+      "fieldname": "organ_type",
+      "fieldtype": "Select",
+      "label": "Organ Type",
+      "options": "\nKidney\nLiver\nHeart\nLung\nPancreas\nIntestine\nCornea\nBone\nSkin\nHeart Valve",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "facility_available",
+      "fieldtype": "Check",
+      "label": "Facility Available",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "accreditation_status",
+      "fieldtype": "Select",
+      "label": "Accreditation Status",
+      "options": "\nAccredited\nPending\nExpired\nNot Applied",
+      "in_list_view": 1
+    }
+  ],
+  "module": "Organ Donation",
+  "name": "Hospital Transplant Facility",
+  "owner": "Administrator",
+  "permissions": [],
+  "track_changes": 0
+}

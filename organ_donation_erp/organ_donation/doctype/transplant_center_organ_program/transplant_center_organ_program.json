@@ -1,0 +1,46 @@
+{
+  "actions": [],
+  "creation": "2024-01-01 00:00:00.000000",
+  "doctype": "DocType",
+  "editable_grid": 1,
+  "engine": "InnoDB",
+  "istable": 1,
+  "field_order": [
+    "organ_type",
+    "program_active",
+    "accreditation_number",
+    "accreditation_expiry"
+  ],
+  "fields": [
+    {
+      "fieldname": "organ_type",
+      "fieldtype": "Select",
+      "label": "Organ Type",
+      "options": "\nKidney\nLiver\nHeart\nLung\nPancreas\nIntestine\nCornea\nBone\nSkin\nHeart Valve",
+      "in_list_view": 1,
+      "reqd": 1
+    },
+    {
+      "fieldname": "program_active",
+      "fieldtype": "Check",
+      "label": "Program Active",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "accreditation_number",
+      "fieldtype": "Data",
+      "label": "Accreditation Number"
+    },
+    {
+      "fieldname": "accreditation_expiry",
+      "fieldtype": "Date",
+      "label": "Accreditation Expiry",
+      "in_list_view": 1
+    }
+  ],
+  "module": "Organ Donation",
+  "name": "Transplant Center Organ Program",
+  "owner": "Administrator",
+  "permissions": [],
+  "track_changes": 0
+}

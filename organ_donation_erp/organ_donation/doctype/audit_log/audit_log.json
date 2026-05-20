@@ -1,0 +1,107 @@
+{
+  "actions": [],
+  "autoname": "naming_series:",
+  "creation": "2024-01-01 00:00:00.000000",
+  "doctype": "DocType",
+  "editable_grid": 1,
+  "engine": "InnoDB",
+  "field_order": [
+    "naming_series",
+    "record_type",
+    "record_name",
+    "action_performed",
+    "performed_by",
+    "date_and_time",
+    "old_values",
+    "new_values",
+    "ip_address",
+    "notes"
+  ],
+  "fields": [
+    {
+      "fieldname": "naming_series",
+      "fieldtype": "Series",
+      "label": "Series",
+      "options": "AL-.YYYY.-.#####",
+      "default": "AL-.YYYY.-.#####"
+    },
+    {
+      "fieldname": "record_type",
+      "fieldtype": "Data",
+      "label": "Record Type",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "record_name",
+      "fieldtype": "Data",
+      "label": "Record Name",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "action_performed",
+      "fieldtype": "Select",
+      "label": "Action Performed",
+      "options": "\nCreate\nUpdate\nDelete\nSubmit\nCancel",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "performed_by",
+      "fieldtype": "Link",
+      "label": "Performed By",
+      "options": "User"
+    },
+    {
+      "fieldname": "date_and_time",
+      "fieldtype": "Datetime",
+      "label": "Date and Time"
+    },
+    {
+      "fieldname": "old_values",
+      "fieldtype": "Text Editor",
+      "label": "Old Values"
+    },
+    {
+      "fieldname": "new_values",
+      "fieldtype": "Text Editor",
+      "label": "New Values"
+    },
+    {
+      "fieldname": "ip_address",
+      "fieldtype": "Data",
+      "label": "IP Address"
+    },
+    {
+      "fieldname": "notes",
+      "fieldtype": "Small Text",
+      "label": "Notes"
+    }
+  ],
+  "module": "Organ Donation",
+  "name": "Audit Log",
+  "naming_rule": "By \"Naming Series\" field",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "role": "System Manager",
+      "permlevel": 0,
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "report": 1,
+      "export": 1,
+      "print": 1,
+      "email": 1,
+      "share": 1
+    },
+    {
+      "role": "All",
+      "permlevel": 0,
+      "read": 1,
+      "report": 1
+    }
+  ],
+  "title_field": "record_type",
+  "track_changes": 0
+}

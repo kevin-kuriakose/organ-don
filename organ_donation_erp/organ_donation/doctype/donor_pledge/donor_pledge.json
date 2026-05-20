@@ -1,0 +1,166 @@
+{
+  "actions": [],
+  "autoname": "naming_series:",
+  "creation": "2024-01-01 00:00:00.000000",
+  "doctype": "DocType",
+  "editable_grid": 1,
+  "engine": "InnoDB",
+  "field_order": [
+    "naming_series",
+    "donor_name",
+    "date_of_birth",
+    "gender",
+    "blood_group",
+    "contact",
+    "address",
+    "aadhaar_number",
+    "organs_pledged",
+    "pledge_date",
+    "pledge_mode",
+    "witness_name",
+    "witness_contact",
+    "next_of_kin_name",
+    "next_of_kin_contact",
+    "next_of_kin_relationship",
+    "registered_with",
+    "registration_certificate_number",
+    "status"
+  ],
+  "fields": [
+    {
+      "fieldname": "naming_series",
+      "fieldtype": "Series",
+      "label": "Series",
+      "options": "DP-.YYYY.-.#####",
+      "default": "DP-.YYYY.-.#####"
+    },
+    {
+      "fieldname": "donor_name",
+      "fieldtype": "Data",
+      "label": "Donor Name",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "date_of_birth",
+      "fieldtype": "Date",
+      "label": "Date of Birth"
+    },
+    {
+      "fieldname": "gender",
+      "fieldtype": "Select",
+      "label": "Gender",
+      "options": "\nMale\nFemale\nOther"
+    },
+    {
+      "fieldname": "blood_group",
+      "fieldtype": "Select",
+      "label": "Blood Group",
+      "options": "\nA Positive\nA Negative\nB Positive\nB Negative\nAB Positive\nAB Negative\nO Positive\nO Negative"
+    },
+    {
+      "fieldname": "contact",
+      "fieldtype": "Data",
+      "label": "Contact"
+    },
+    {
+      "fieldname": "address",
+      "fieldtype": "Small Text",
+      "label": "Address"
+    },
+    {
+      "fieldname": "aadhaar_number",
+      "fieldtype": "Data",
+      "label": "Aadhaar Number"
+    },
+    {
+      "fieldname": "organs_pledged",
+      "fieldtype": "Table",
+      "label": "Organs Pledged",
+      "options": "Donor Pledge Organ"
+    },
+    {
+      "fieldname": "pledge_date",
+      "fieldtype": "Date",
+      "label": "Pledge Date",
+      "reqd": 1
+    },
+    {
+      "fieldname": "pledge_mode",
+      "fieldtype": "Select",
+      "label": "Pledge Mode",
+      "options": "\nOnline\nIn Person\nHospital"
+    },
+    {
+      "fieldname": "witness_name",
+      "fieldtype": "Data",
+      "label": "Witness Name"
+    },
+    {
+      "fieldname": "witness_contact",
+      "fieldtype": "Data",
+      "label": "Witness Contact"
+    },
+    {
+      "fieldname": "next_of_kin_name",
+      "fieldtype": "Data",
+      "label": "Next of Kin Name"
+    },
+    {
+      "fieldname": "next_of_kin_contact",
+      "fieldtype": "Data",
+      "label": "Next of Kin Contact"
+    },
+    {
+      "fieldname": "next_of_kin_relationship",
+      "fieldtype": "Data",
+      "label": "Next of Kin Relationship"
+    },
+    {
+      "fieldname": "registered_with",
+      "fieldtype": "Select",
+      "label": "Registered With",
+      "options": "\nNOTTO\nSOTTO\nHospital"
+    },
+    {
+      "fieldname": "registration_certificate_number",
+      "fieldtype": "Data",
+      "label": "Registration Certificate Number"
+    },
+    {
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "label": "Status",
+      "options": "Active\nDeceased\nRevoked",
+      "default": "Active",
+      "in_list_view": 1
+    }
+  ],
+  "module": "Organ Donation",
+  "name": "Donor Pledge",
+  "naming_rule": "By \"Naming Series\" field",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "role": "System Manager",
+      "permlevel": 0,
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "report": 1,
+      "export": 1,
+      "print": 1,
+      "email": 1,
+      "share": 1
+    },
+    {
+      "role": "All",
+      "permlevel": 0,
+      "read": 1,
+      "report": 1
+    }
+  ],
+  "title_field": "donor_name",
+  "track_changes": 1
+}

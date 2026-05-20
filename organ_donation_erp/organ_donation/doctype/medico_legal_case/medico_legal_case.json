@@ -1,0 +1,131 @@
+{
+  "actions": [],
+  "autoname": "naming_series:",
+  "creation": "2024-01-01 00:00:00.000000",
+  "doctype": "DocType",
+  "editable_grid": 1,
+  "engine": "InnoDB",
+  "field_order": [
+    "naming_series",
+    "deceased_donor",
+    "police_case_number",
+    "police_station",
+    "io_name",
+    "io_contact",
+    "mlc_number",
+    "noc_received",
+    "noc_date",
+    "forensic_clearance",
+    "forensic_doctor_name",
+    "medico_legal_clearance_date",
+    "notes",
+    "status"
+  ],
+  "fields": [
+    {
+      "fieldname": "naming_series",
+      "fieldtype": "Series",
+      "label": "Series",
+      "options": "MLC-.YYYY.-.#####",
+      "default": "MLC-.YYYY.-.#####"
+    },
+    {
+      "fieldname": "deceased_donor",
+      "fieldtype": "Link",
+      "label": "Deceased Donor",
+      "options": "Deceased Donor",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "police_case_number",
+      "fieldtype": "Data",
+      "label": "Police Case Number"
+    },
+    {
+      "fieldname": "police_station",
+      "fieldtype": "Data",
+      "label": "Police Station"
+    },
+    {
+      "fieldname": "io_name",
+      "fieldtype": "Data",
+      "label": "IO Name"
+    },
+    {
+      "fieldname": "io_contact",
+      "fieldtype": "Data",
+      "label": "IO Contact"
+    },
+    {
+      "fieldname": "mlc_number",
+      "fieldtype": "Data",
+      "label": "MLC Number"
+    },
+    {
+      "fieldname": "noc_received",
+      "fieldtype": "Check",
+      "label": "NOC Received"
+    },
+    {
+      "fieldname": "noc_date",
+      "fieldtype": "Date",
+      "label": "NOC Date"
+    },
+    {
+      "fieldname": "forensic_clearance",
+      "fieldtype": "Check",
+      "label": "Forensic Clearance"
+    },
+    {
+      "fieldname": "forensic_doctor_name",
+      "fieldtype": "Data",
+      "label": "Forensic Doctor Name"
+    },
+    {
+      "fieldname": "medico_legal_clearance_date",
+      "fieldtype": "Date",
+      "label": "Medico Legal Clearance Date"
+    },
+    {
+      "fieldname": "notes",
+      "fieldtype": "Text Editor",
+      "label": "Notes"
+    },
+    {
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "label": "Status",
+      "options": "Pending\nCleared\nRejected",
+      "default": "Pending",
+      "in_list_view": 1
+    }
+  ],
+  "module": "Organ Donation",
+  "name": "Medico Legal Case",
+  "naming_rule": "By \"Naming Series\" field",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "role": "System Manager",
+      "permlevel": 0,
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "report": 1,
+      "export": 1,
+      "print": 1,
+      "email": 1,
+      "share": 1
+    },
+    {
+      "role": "All",
+      "permlevel": 0,
+      "read": 1,
+      "report": 1
+    }
+  ],
+  "title_field": "deceased_donor",
+  "track_changes": 1
+}

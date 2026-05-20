@@ -1,0 +1,137 @@
+{
+  "actions": [],
+  "autoname": "naming_series:",
+  "creation": "2024-01-01 00:00:00.000000",
+  "doctype": "DocType",
+  "editable_grid": 1,
+  "engine": "InnoDB",
+  "field_order": [
+    "naming_series",
+    "referring_hospital",
+    "referred_by",
+    "referral_date",
+    "patient_name",
+    "patient_age",
+    "patient_blood_group",
+    "organ_needed_or_donor_type",
+    "urgency",
+    "clinical_summary",
+    "action_taken",
+    "assigned_coordinator",
+    "response_time_minutes",
+    "status"
+  ],
+  "fields": [
+    {
+      "fieldname": "naming_series",
+      "fieldtype": "Series",
+      "label": "Series",
+      "options": "REF-.YYYY.-.#####",
+      "default": "REF-.YYYY.-.#####"
+    },
+    {
+      "fieldname": "referring_hospital",
+      "fieldtype": "Link",
+      "label": "Referring Hospital",
+      "options": "Hospital",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "referred_by",
+      "fieldtype": "Data",
+      "label": "Referred By (Doctor)"
+    },
+    {
+      "fieldname": "referral_date",
+      "fieldtype": "Datetime",
+      "label": "Referral Date",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "patient_name",
+      "fieldtype": "Data",
+      "label": "Patient Name"
+    },
+    {
+      "fieldname": "patient_age",
+      "fieldtype": "Int",
+      "label": "Patient Age"
+    },
+    {
+      "fieldname": "patient_blood_group",
+      "fieldtype": "Select",
+      "label": "Patient Blood Group",
+      "options": "\nA Positive\nA Negative\nB Positive\nB Negative\nAB Positive\nAB Negative\nO Positive\nO Negative"
+    },
+    {
+      "fieldname": "organ_needed_or_donor_type",
+      "fieldtype": "Data",
+      "label": "Organ Needed or Donor Type"
+    },
+    {
+      "fieldname": "urgency",
+      "fieldtype": "Select",
+      "label": "Urgency",
+      "options": "\nSuper Urgent\nUrgent\nSemi Urgent\nElective",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "clinical_summary",
+      "fieldtype": "Text Editor",
+      "label": "Clinical Summary"
+    },
+    {
+      "fieldname": "action_taken",
+      "fieldtype": "Small Text",
+      "label": "Action Taken"
+    },
+    {
+      "fieldname": "assigned_coordinator",
+      "fieldtype": "Link",
+      "label": "Assigned Coordinator",
+      "options": "Transplant Coordinator"
+    },
+    {
+      "fieldname": "response_time_minutes",
+      "fieldtype": "Int",
+      "label": "Response Time (minutes)"
+    },
+    {
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "label": "Status",
+      "options": "Received\nAcknowledged\nEscalated\nClosed",
+      "default": "Received",
+      "in_list_view": 1
+    }
+  ],
+  "module": "Organ Donation",
+  "name": "Referral",
+  "naming_rule": "By \"Naming Series\" field",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "role": "System Manager",
+      "permlevel": 0,
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "report": 1,
+      "export": 1,
+      "print": 1,
+      "email": 1,
+      "share": 1
+    },
+    {
+      "role": "All",
+      "permlevel": 0,
+      "read": 1,
+      "report": 1
+    }
+  ],
+  "title_field": "referring_hospital",
+  "track_changes": 1
+}

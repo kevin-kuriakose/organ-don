@@ -1,0 +1,147 @@
+{
+  "actions": [],
+  "autoname": "naming_series:",
+  "creation": "2024-01-01 00:00:00.000000",
+  "doctype": "DocType",
+  "editable_grid": 1,
+  "engine": "InnoDB",
+  "field_order": [
+    "naming_series",
+    "recipient",
+    "transplant_surgery",
+    "follow_up_date",
+    "follow_up_type",
+    "attending_doctor",
+    "graft_function_status",
+    "rejection_episode_type",
+    "rejection_treatment_given",
+    "immunosuppression_regimen",
+    "lab_results",
+    "complications_noted",
+    "hospital_admission_required",
+    "next_follow_up_date",
+    "status"
+  ],
+  "fields": [
+    {
+      "fieldname": "naming_series",
+      "fieldtype": "Series",
+      "label": "Series",
+      "options": "PTFU-.YYYY.-.#####",
+      "default": "PTFU-.YYYY.-.#####"
+    },
+    {
+      "fieldname": "recipient",
+      "fieldtype": "Link",
+      "label": "Recipient",
+      "options": "Recipient",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "transplant_surgery",
+      "fieldtype": "Link",
+      "label": "Transplant Surgery",
+      "options": "Transplant Surgery"
+    },
+    {
+      "fieldname": "follow_up_date",
+      "fieldtype": "Date",
+      "label": "Follow Up Date",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "follow_up_type",
+      "fieldtype": "Select",
+      "label": "Follow Up Type",
+      "options": "\nDay 1\nWeek 1\nMonth 1\nMonth 3\nMonth 6\nYear 1\nAnnual",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "attending_doctor",
+      "fieldtype": "Data",
+      "label": "Attending Doctor"
+    },
+    {
+      "fieldname": "graft_function_status",
+      "fieldtype": "Select",
+      "label": "Graft Function Status",
+      "options": "\nExcellent\nGood\nSatisfactory\nDeclining\nFailed",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "rejection_episode_type",
+      "fieldtype": "Select",
+      "label": "Rejection Episode",
+      "options": "\nNone\nAcute\nChronic\nHyperacute"
+    },
+    {
+      "fieldname": "rejection_treatment_given",
+      "fieldtype": "Data",
+      "label": "Rejection Treatment Given"
+    },
+    {
+      "fieldname": "immunosuppression_regimen",
+      "fieldtype": "Table",
+      "label": "Immunosuppression Regimen",
+      "options": "Immunosuppression Regimen"
+    },
+    {
+      "fieldname": "lab_results",
+      "fieldtype": "Table",
+      "label": "Lab Results",
+      "options": "Followup Lab Result"
+    },
+    {
+      "fieldname": "complications_noted",
+      "fieldtype": "Small Text",
+      "label": "Complications Noted"
+    },
+    {
+      "fieldname": "hospital_admission_required",
+      "fieldtype": "Check",
+      "label": "Hospital Admission Required"
+    },
+    {
+      "fieldname": "next_follow_up_date",
+      "fieldtype": "Date",
+      "label": "Next Follow Up Date"
+    },
+    {
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "label": "Status",
+      "options": "Scheduled\nCompleted\nMissed",
+      "default": "Scheduled",
+      "in_list_view": 1
+    }
+  ],
+  "module": "Organ Donation",
+  "name": "Post Transplant Follow Up",
+  "naming_rule": "By \"Naming Series\" field",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "role": "System Manager",
+      "permlevel": 0,
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "report": 1,
+      "export": 1,
+      "print": 1,
+      "email": 1,
+      "share": 1
+    },
+    {
+      "role": "All",
+      "permlevel": 0,
+      "read": 1,
+      "report": 1
+    }
+  ],
+  "title_field": "recipient",
+  "track_changes": 1
+}

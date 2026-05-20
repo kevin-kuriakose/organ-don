@@ -1,0 +1,137 @@
+{
+  "actions": [],
+  "autoname": "naming_series:",
+  "creation": "2024-01-01 00:00:00.000000",
+  "doctype": "DocType",
+  "editable_grid": 1,
+  "engine": "InnoDB",
+  "is_submittable": 1,
+  "field_order": [
+    "naming_series",
+    "recipient",
+    "transplant_surgery",
+    "episode_date",
+    "rejection_type",
+    "biopsy_performed",
+    "biopsy_result",
+    "dsa_test_result",
+    "treatment_protocol",
+    "treatment_outcome",
+    "managed_by",
+    "notes",
+    "amended_from"
+  ],
+  "fields": [
+    {
+      "fieldname": "naming_series",
+      "fieldtype": "Series",
+      "label": "Series",
+      "options": "RE-.YYYY.-.#####",
+      "default": "RE-.YYYY.-.#####"
+    },
+    {
+      "fieldname": "recipient",
+      "fieldtype": "Link",
+      "label": "Recipient",
+      "options": "Recipient",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "transplant_surgery",
+      "fieldtype": "Link",
+      "label": "Transplant Surgery",
+      "options": "Transplant Surgery"
+    },
+    {
+      "fieldname": "episode_date",
+      "fieldtype": "Date",
+      "label": "Episode Date",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "rejection_type",
+      "fieldtype": "Select",
+      "label": "Rejection Type",
+      "options": "\nHyperacute\nAcute Cellular\nAcute Antibody Mediated\nChronic",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "biopsy_performed",
+      "fieldtype": "Check",
+      "label": "Biopsy Performed"
+    },
+    {
+      "fieldname": "biopsy_result",
+      "fieldtype": "Data",
+      "label": "Biopsy Result"
+    },
+    {
+      "fieldname": "dsa_test_result",
+      "fieldtype": "Data",
+      "label": "DSA Test Result"
+    },
+    {
+      "fieldname": "treatment_protocol",
+      "fieldtype": "Data",
+      "label": "Treatment Protocol"
+    },
+    {
+      "fieldname": "treatment_outcome",
+      "fieldtype": "Select",
+      "label": "Treatment Outcome",
+      "options": "\nReversed\nPartial\nGraft Loss",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "managed_by",
+      "fieldtype": "Data",
+      "label": "Managed By"
+    },
+    {
+      "fieldname": "notes",
+      "fieldtype": "Text Editor",
+      "label": "Notes"
+    },
+    {
+      "fieldname": "amended_from",
+      "fieldtype": "Link",
+      "label": "Amended From",
+      "options": "Rejection Episode",
+      "no_copy": 1,
+      "print_hide": 1,
+      "read_only": 1
+    }
+  ],
+  "module": "Organ Donation",
+  "name": "Rejection Episode",
+  "naming_rule": "By \"Naming Series\" field",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "role": "System Manager",
+      "permlevel": 0,
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "submit": 1,
+      "cancel": 1,
+      "amend": 1,
+      "report": 1,
+      "export": 1,
+      "print": 1,
+      "email": 1,
+      "share": 1
+    },
+    {
+      "role": "All",
+      "permlevel": 0,
+      "read": 1,
+      "report": 1
+    }
+  ],
+  "title_field": "recipient",
+  "track_changes": 1
+}

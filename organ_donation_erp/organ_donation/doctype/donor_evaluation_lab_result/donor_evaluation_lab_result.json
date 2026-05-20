@@ -1,0 +1,46 @@
+{
+  "actions": [],
+  "creation": "2024-01-01 00:00:00.000000",
+  "doctype": "DocType",
+  "editable_grid": 1,
+  "engine": "InnoDB",
+  "istable": 1,
+  "field_order": [
+    "test_name",
+    "result",
+    "normal_range",
+    "flag"
+  ],
+  "fields": [
+    {
+      "fieldname": "test_name",
+      "fieldtype": "Data",
+      "label": "Test Name",
+      "in_list_view": 1,
+      "reqd": 1
+    },
+    {
+      "fieldname": "result",
+      "fieldtype": "Data",
+      "label": "Result",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "normal_range",
+      "fieldtype": "Data",
+      "label": "Normal Range"
+    },
+    {
+      "fieldname": "flag",
+      "fieldtype": "Select",
+      "label": "Flag",
+      "options": "\nNormal\nHigh\nLow\nCritical",
+      "in_list_view": 1
+    }
+  ],
+  "module": "Organ Donation",
+  "name": "Donor Evaluation Lab Result",
+  "owner": "Administrator",
+  "permissions": [],
+  "track_changes": 0
+}

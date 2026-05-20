@@ -1,0 +1,515 @@
+{
+  "doctype": "Workspace",
+  "name": "LifeEdge",
+  "title": "LifeEdge",
+  "module": "Organ Donation",
+  "is_standard": 1,
+  "public": 1,
+  "content": "[{\"id\": \"cb-1\", \"type\": \"card\", \"data\": {\"card_name\": \"Hospital Network\", \"col\": 12}}, {\"id\": \"cb-2\", \"type\": \"card\", \"data\": {\"card_name\": \"Coordinators and Training\", \"col\": 12}}, {\"id\": \"cb-3\", \"type\": \"card\", \"data\": {\"card_name\": \"Awareness\", \"col\": 12}}, {\"id\": \"cb-4\", \"type\": \"card\", \"data\": {\"card_name\": \"Donor Management\", \"col\": 12}}, {\"id\": \"cb-5\", \"type\": \"card\", \"data\": {\"card_name\": \"Recipients and Waitlist\", \"col\": 12}}, {\"id\": \"cb-6\", \"type\": \"card\", \"data\": {\"card_name\": \"Procurement and Allocation\", \"col\": 12}}, {\"id\": \"cb-7\", \"type\": \"card\", \"data\": {\"card_name\": \"Transplant Operations\", \"col\": 12}}, {\"id\": \"cb-8\", \"type\": \"card\", \"data\": {\"card_name\": \"Compliance and Legal\", \"col\": 12}}, {\"id\": \"cb-9\", \"type\": \"card\", \"data\": {\"card_name\": \"Tissue Bank\", \"col\": 12}}, {\"id\": \"cb-10\", \"type\": \"card\", \"data\": {\"card_name\": \"Reports\", \"col\": 12}}]",
+  "links": [
+    {
+      "label": "Hospital Network",
+      "title": "Hospital Network",
+      "type": "Card Break",
+      "link_to": null,
+      "link_type": null,
+      "is_query_report": 0
+    },
+    {
+      "label": "Hospital",
+      "title": "Hospital",
+      "type": "Link",
+      "link_to": "Hospital",
+      "link_type": "DocType",
+      "is_query_report": 0
+    },
+    {
+      "label": "Transplant Center",
+      "title": "Transplant Center",
+      "type": "Link",
+      "link_to": "Transplant Center",
+      "link_type": "DocType",
+      "is_query_report": 0
+    },
+    {
+      "label": "Hospital Partnership",
+      "title": "Hospital Partnership",
+      "type": "Link",
+      "link_to": "Hospital Partnership",
+      "link_type": "DocType",
+      "is_query_report": 0
+    },
+    {
+      "label": "Coordinators and Training",
+      "title": "Coordinators and Training",
+      "type": "Card Break",
+      "link_to": null,
+      "link_type": null,
+      "is_query_report": 0
+    },
+    {
+      "label": "Transplant Coordinator",
+      "title": "Transplant Coordinator",
+      "type": "Link",
+      "link_to": "Transplant Coordinator",
+      "link_type": "DocType",
+      "is_query_report": 0
+    },
+    {
+      "label": "Staff Training",
+      "title": "Staff Training",
+      "type": "Link",
+      "link_to": "Staff Training",
+      "link_type": "DocType",
+      "is_query_report": 0
+    },
+    {
+      "label": "Awareness",
+      "title": "Awareness",
+      "type": "Card Break",
+      "link_to": null,
+      "link_type": null,
+      "is_query_report": 0
+    },
+    {
+      "label": "IEC Material",
+      "title": "IEC Material",
+      "type": "Link",
+      "link_to": "IEC Material",
+      "link_type": "DocType",
+      "is_query_report": 0
+    },
+    {
+      "label": "Donor Management",
+      "title": "Donor Management",
+      "type": "Card Break",
+      "link_to": null,
+      "link_type": null,
+      "is_query_report": 0
+    },
+    {
+      "label": "Donor Pledge",
+      "title": "Donor Pledge",
+      "type": "Link",
+      "link_to": "Donor Pledge",
+      "link_type": "DocType",
+      "is_query_report": 0
+    },
+    {
+      "label": "Deceased Donor",
+      "title": "Deceased Donor",
+      "type": "Link",
+      "link_to": "Deceased Donor",
+      "link_type": "DocType",
+      "is_query_report": 0
+    },
+    {
+      "label": "Living Donor",
+      "title": "Living Donor",
+      "type": "Link",
+      "link_to": "Living Donor",
+      "link_type": "DocType",
+      "is_query_report": 0
+    },
+    {
+      "label": "Donor Evaluation",
+      "title": "Donor Evaluation",
+      "type": "Link",
+      "link_to": "Donor Evaluation",
+      "link_type": "DocType",
+      "is_query_report": 0
+    },
+    {
+      "label": "Brain Death Certificate",
+      "title": "Brain Death Certificate",
+      "type": "Link",
+      "link_to": "Brain Death Certificate",
+      "link_type": "DocType",
+      "is_query_report": 0
+    },
+    {
+      "label": "Family Consent Record",
+      "title": "Family Consent Record",
+      "type": "Link",
+      "link_to": "Family Consent Record",
+      "link_type": "DocType",
+      "is_query_report": 0
+    },
+    {
+      "label": "Recipients and Waitlist",
+      "title": "Recipients and Waitlist",
+      "type": "Card Break",
+      "link_to": null,
+      "link_type": null,
+      "is_query_report": 0
+    },
+    {
+      "label": "Recipient",
+      "title": "Recipient",
+      "type": "Link",
+      "link_to": "Recipient",
+      "link_type": "DocType",
+      "is_query_report": 0
+    },
+    {
+      "label": "Waitlist Entry",
+      "title": "Waitlist Entry",
+      "type": "Link",
+      "link_to": "Waitlist Entry",
+      "link_type": "DocType",
+      "is_query_report": 0
+    },
+    {
+      "label": "HLA Matching Record",
+      "title": "HLA Matching Record",
+      "type": "Link",
+      "link_to": "HLA Matching Record",
+      "link_type": "DocType",
+      "is_query_report": 0
+    },
+    {
+      "label": "Organ Offer",
+      "title": "Organ Offer",
+      "type": "Link",
+      "link_to": "Organ Offer",
+      "link_type": "DocType",
+      "is_query_report": 0
+    },
+    {
+      "label": "Procurement and Allocation",
+      "title": "Procurement and Allocation",
+      "type": "Card Break",
+      "link_to": null,
+      "link_type": null,
+      "is_query_report": 0
+    },
+    {
+      "label": "Procurement Case",
+      "title": "Procurement Case",
+      "type": "Link",
+      "link_to": "Procurement Case",
+      "link_type": "DocType",
+      "is_query_report": 0
+    },
+    {
+      "label": "Organ Record",
+      "title": "Organ Record",
+      "type": "Link",
+      "link_to": "Organ Record",
+      "link_type": "DocType",
+      "is_query_report": 0
+    },
+    {
+      "label": "Allocation Order",
+      "title": "Allocation Order",
+      "type": "Link",
+      "link_to": "Allocation Order",
+      "link_type": "DocType",
+      "is_query_report": 0
+    },
+    {
+      "label": "Organ Transport",
+      "title": "Organ Transport",
+      "type": "Link",
+      "link_to": "Organ Transport",
+      "link_type": "DocType",
+      "is_query_report": 0
+    },
+    {
+      "label": "Green Corridor Request",
+      "title": "Green Corridor Request",
+      "type": "Link",
+      "link_to": "Green Corridor Request",
+      "link_type": "DocType",
+      "is_query_report": 0
+    },
+    {
+      "label": "Transplant Operations",
+      "title": "Transplant Operations",
+      "type": "Card Break",
+      "link_to": null,
+      "link_type": null,
+      "is_query_report": 0
+    },
+    {
+      "label": "Transplant Surgery",
+      "title": "Transplant Surgery",
+      "type": "Link",
+      "link_to": "Transplant Surgery",
+      "link_type": "DocType",
+      "is_query_report": 0
+    },
+    {
+      "label": "Post Transplant Follow Up",
+      "title": "Post Transplant Follow Up",
+      "type": "Link",
+      "link_to": "Post Transplant Follow Up",
+      "link_type": "DocType",
+      "is_query_report": 0
+    },
+    {
+      "label": "Graft Outcome",
+      "title": "Graft Outcome",
+      "type": "Link",
+      "link_to": "Graft Outcome",
+      "link_type": "DocType",
+      "is_query_report": 0
+    },
+    {
+      "label": "Rejection Episode",
+      "title": "Rejection Episode",
+      "type": "Link",
+      "link_to": "Rejection Episode",
+      "link_type": "DocType",
+      "is_query_report": 0
+    },
+    {
+      "label": "Compliance and Legal",
+      "title": "Compliance and Legal",
+      "type": "Card Break",
+      "link_to": null,
+      "link_type": null,
+      "is_query_report": 0
+    },
+    {
+      "label": "THOTA Compliance Record",
+      "title": "THOTA Compliance Record",
+      "type": "Link",
+      "link_to": "THOTA Compliance Record",
+      "link_type": "DocType",
+      "is_query_report": 0
+    },
+    {
+      "label": "Authorization Committee Record",
+      "title": "Authorization Committee Record",
+      "type": "Link",
+      "link_to": "Authorization Committee Record",
+      "link_type": "DocType",
+      "is_query_report": 0
+    },
+    {
+      "label": "Medico Legal Case",
+      "title": "Medico Legal Case",
+      "type": "Link",
+      "link_to": "Medico Legal Case",
+      "link_type": "DocType",
+      "is_query_report": 0
+    },
+    {
+      "label": "NOTTO Report",
+      "title": "NOTTO Report",
+      "type": "Link",
+      "link_to": "NOTTO Report",
+      "link_type": "DocType",
+      "is_query_report": 0
+    },
+    {
+      "label": "Tissue Bank",
+      "title": "Tissue Bank",
+      "type": "Card Break",
+      "link_to": null,
+      "link_type": null,
+      "is_query_report": 0
+    },
+    {
+      "label": "Tissue Donor",
+      "title": "Tissue Donor",
+      "type": "Link",
+      "link_to": "Tissue Donor",
+      "link_type": "DocType",
+      "is_query_report": 0
+    },
+    {
+      "label": "Tissue Issue",
+      "title": "Tissue Issue",
+      "type": "Link",
+      "link_to": "Tissue Issue",
+      "link_type": "DocType",
+      "is_query_report": 0
+    },
+    {
+      "label": "Tissue Storage",
+      "title": "Tissue Storage",
+      "type": "Link",
+      "link_to": "Tissue Storage",
+      "link_type": "DocType",
+      "is_query_report": 0
+    },
+    {
+      "label": "Referral",
+      "title": "Referral",
+      "type": "Link",
+      "link_to": "Referral",
+      "link_type": "DocType",
+      "is_query_report": 0
+    },
+    {
+      "label": "Coordinator Case Log",
+      "title": "Coordinator Case Log",
+      "type": "Link",
+      "link_to": "Coordinator Case Log",
+      "link_type": "DocType",
+      "is_query_report": 0
+    },
+    {
+      "label": "On Call Schedule",
+      "title": "On Call Schedule",
+      "type": "Link",
+      "link_to": "On Call Schedule",
+      "link_type": "DocType",
+      "is_query_report": 0
+    },
+    {
+      "label": "Awareness Campaign",
+      "title": "Awareness Campaign",
+      "type": "Link",
+      "link_to": "Awareness Campaign",
+      "link_type": "DocType",
+      "is_query_report": 0
+    },
+    {
+      "label": "Pledge Drive",
+      "title": "Pledge Drive",
+      "type": "Link",
+      "link_to": "Pledge Drive",
+      "link_type": "DocType",
+      "is_query_report": 0
+    },
+    {
+      "label": "Public Awareness Event",
+      "title": "Public Awareness Event",
+      "type": "Link",
+      "link_to": "Public Awareness Event",
+      "link_type": "DocType",
+      "is_query_report": 0
+    },
+    {
+      "label": "Reports",
+      "title": "Reports",
+      "type": "Card Break",
+      "link_to": null,
+      "link_type": null,
+      "is_query_report": 0
+    },
+    {
+      "label": "Donor Registry Report",
+      "title": "Donor Registry Report",
+      "type": "Link",
+      "link_to": "Donor Registry Report",
+      "link_type": "Report",
+      "is_query_report": 1
+    },
+    {
+      "label": "Waitlist Status Report",
+      "title": "Waitlist Status Report",
+      "type": "Link",
+      "link_to": "Waitlist Status Report",
+      "link_type": "Report",
+      "is_query_report": 1
+    },
+    {
+      "label": "Organ Utilization Report",
+      "title": "Organ Utilization Report",
+      "type": "Link",
+      "link_to": "Organ Utilization Report",
+      "link_type": "Report",
+      "is_query_report": 1
+    },
+    {
+      "label": "Transplant Activity Report",
+      "title": "Transplant Activity Report",
+      "type": "Link",
+      "link_to": "Transplant Activity Report",
+      "link_type": "Report",
+      "is_query_report": 1
+    },
+    {
+      "label": "Cold Ischemia Time Report",
+      "title": "Cold Ischemia Time Report",
+      "type": "Link",
+      "link_to": "Cold Ischemia Time Report",
+      "link_type": "Report",
+      "is_query_report": 1
+    },
+    {
+      "label": "Post Transplant Outcomes Report",
+      "title": "Post Transplant Outcomes Report",
+      "type": "Link",
+      "link_to": "Post Transplant Outcomes Report",
+      "link_type": "Report",
+      "is_query_report": 1
+    },
+    {
+      "label": "Coordinator Performance Report",
+      "title": "Coordinator Performance Report",
+      "type": "Link",
+      "link_to": "Coordinator Performance Report",
+      "link_type": "Report",
+      "is_query_report": 1
+    },
+    {
+      "label": "Hospital Network Report",
+      "title": "Hospital Network Report",
+      "type": "Link",
+      "link_to": "Hospital Network Report",
+      "link_type": "Report",
+      "is_query_report": 1
+    },
+    {
+      "label": "Campaign Impact Report",
+      "title": "Campaign Impact Report",
+      "type": "Link",
+      "link_to": "Campaign Impact Report",
+      "link_type": "Report",
+      "is_query_report": 1
+    },
+    {
+      "label": "THOTA Compliance Dashboard",
+      "title": "THOTA Compliance Dashboard",
+      "type": "Link",
+      "link_to": "THOTA Compliance Dashboard",
+      "link_type": "Report",
+      "is_query_report": 1
+    },
+    {
+      "label": "Brain Death Certification Report",
+      "title": "Brain Death Certification Report",
+      "type": "Link",
+      "link_to": "Brain Death Certification Report",
+      "link_type": "Report",
+      "is_query_report": 1
+    },
+    {
+      "label": "Green Corridor Report",
+      "title": "Green Corridor Report",
+      "type": "Link",
+      "link_to": "Green Corridor Report",
+      "link_type": "Report",
+      "is_query_report": 1
+    },
+    {
+      "label": "Organ Offer Acceptance Report",
+      "title": "Organ Offer Acceptance Report",
+      "type": "Link",
+      "link_to": "Organ Offer Acceptance Report",
+      "link_type": "Report",
+      "is_query_report": 1
+    },
+    {
+      "label": "Living Donor Outcomes Report",
+      "title": "Living Donor Outcomes Report",
+      "type": "Link",
+      "link_to": "Living Donor Outcomes Report",
+      "link_type": "Report",
+      "is_query_report": 1
+    },
+    {
+      "label": "NOTTO National Registry Summary",
+      "title": "NOTTO National Registry Summary",
+      "type": "Link",
+      "link_to": "NOTTO National Registry Summary",
+      "link_type": "Report",
+      "is_query_report": 1
+    }
+  ]
+}

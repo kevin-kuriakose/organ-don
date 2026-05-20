@@ -1,0 +1,179 @@
+{
+  "actions": [],
+  "autoname": "naming_series:",
+  "creation": "2024-01-01 00:00:00.000000",
+  "doctype": "DocType",
+  "editable_grid": 1,
+  "engine": "InnoDB",
+  "field_order": [
+    "naming_series",
+    "procurement_case",
+    "organ_type",
+    "side",
+    "donor",
+    "procurement_time",
+    "cold_ischemia_start_time",
+    "warm_ischemia_time",
+    "perfusion_status",
+    "preservation_solution",
+    "viability_assessment",
+    "allocated_to_recipient",
+    "allocated_to_hospital",
+    "allocation_time",
+    "transplant_surgery_start_time",
+    "cold_ischemia_end_time",
+    "total_cold_ischemia_time",
+    "outcome",
+    "discard_reason",
+    "status"
+  ],
+  "fields": [
+    {
+      "fieldname": "naming_series",
+      "fieldtype": "Series",
+      "label": "Series",
+      "options": "OR-.YYYY.-.#####",
+      "default": "OR-.YYYY.-.#####"
+    },
+    {
+      "fieldname": "procurement_case",
+      "fieldtype": "Link",
+      "label": "Procurement Case",
+      "options": "Procurement Case",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "organ_type",
+      "fieldtype": "Select",
+      "label": "Organ Type",
+      "options": "\nKidney\nLiver\nHeart\nLung\nPancreas\nIntestine\nCornea\nBone\nSkin\nHeart Valve",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "side",
+      "fieldtype": "Select",
+      "label": "Side",
+      "options": "\nLeft\nRight\nNA"
+    },
+    {
+      "fieldname": "donor",
+      "fieldtype": "Link",
+      "label": "Donor (Deceased)",
+      "options": "Deceased Donor"
+    },
+    {
+      "fieldname": "procurement_time",
+      "fieldtype": "Datetime",
+      "label": "Procurement Time"
+    },
+    {
+      "fieldname": "cold_ischemia_start_time",
+      "fieldtype": "Datetime",
+      "label": "Cold Ischemia Start"
+    },
+    {
+      "fieldname": "warm_ischemia_time",
+      "fieldtype": "Float",
+      "label": "Warm Ischemia Time (min)"
+    },
+    {
+      "fieldname": "perfusion_status",
+      "fieldtype": "Select",
+      "label": "Perfusion Status",
+      "options": "\nPerfused\nNot Perfused"
+    },
+    {
+      "fieldname": "preservation_solution",
+      "fieldtype": "Data",
+      "label": "Preservation Solution"
+    },
+    {
+      "fieldname": "viability_assessment",
+      "fieldtype": "Select",
+      "label": "Viability Assessment",
+      "options": "\nViable\nMarginal\nNot Viable",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "allocated_to_recipient",
+      "fieldtype": "Link",
+      "label": "Allocated To Recipient",
+      "options": "Recipient"
+    },
+    {
+      "fieldname": "allocated_to_hospital",
+      "fieldtype": "Link",
+      "label": "Allocated To Hospital",
+      "options": "Hospital"
+    },
+    {
+      "fieldname": "allocation_time",
+      "fieldtype": "Datetime",
+      "label": "Allocation Time"
+    },
+    {
+      "fieldname": "transplant_surgery_start_time",
+      "fieldtype": "Datetime",
+      "label": "Surgery Start Time"
+    },
+    {
+      "fieldname": "cold_ischemia_end_time",
+      "fieldtype": "Datetime",
+      "label": "Cold Ischemia End"
+    },
+    {
+      "fieldname": "total_cold_ischemia_time",
+      "fieldtype": "Float",
+      "label": "Total Cold Ischemia (hrs)"
+    },
+    {
+      "fieldname": "outcome",
+      "fieldtype": "Select",
+      "label": "Outcome",
+      "options": "\nTransplanted\nDiscarded\nExported\nResearch",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "discard_reason",
+      "fieldtype": "Select",
+      "label": "Discard Reason",
+      "options": "\nPoor Viability\nRecipient Unavailable\nLogistics Failure\nTechnical Damage\nInfectious Disease\nTime Exceeded\nNo Suitable Recipient"
+    },
+    {
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "label": "Status",
+      "options": "Procured\nAllocated\nIn Transit\nTransplanted\nDiscarded",
+      "default": "Procured",
+      "in_list_view": 1
+    }
+  ],
+  "module": "Organ Donation",
+  "name": "Organ Record",
+  "naming_rule": "By \"Naming Series\" field",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "role": "System Manager",
+      "permlevel": 0,
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "report": 1,
+      "export": 1,
+      "print": 1,
+      "email": 1,
+      "share": 1
+    },
+    {
+      "role": "All",
+      "permlevel": 0,
+      "read": 1,
+      "report": 1
+    }
+  ],
+  "title_field": "organ_type",
+  "track_changes": 1
+}

@@ -1,0 +1,118 @@
+{
+  "actions": [],
+  "autoname": "naming_series:",
+  "creation": "2024-01-01 00:00:00.000000",
+  "doctype": "DocType",
+  "editable_grid": 1,
+  "engine": "InnoDB",
+  "is_submittable": 1,
+  "field_order": [
+    "naming_series",
+    "report_period",
+    "report_type",
+    "prepared_by",
+    "submitted_date",
+    "submission_reference",
+    "data_summary",
+    "acknowledgement_received",
+    "status",
+    "amended_from"
+  ],
+  "fields": [
+    {
+      "fieldname": "naming_series",
+      "fieldtype": "Series",
+      "label": "Series",
+      "options": "NR-.YYYY.-.#####",
+      "default": "NR-.YYYY.-.#####"
+    },
+    {
+      "fieldname": "report_period",
+      "fieldtype": "Select",
+      "label": "Report Period",
+      "options": "\nMonthly\nQuarterly\nAnnual",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "report_type",
+      "fieldtype": "Select",
+      "label": "Report Type",
+      "options": "\nDonor Registry\nRecipient Registry\nTransplant Activity\nOutcome Report",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "prepared_by",
+      "fieldtype": "Link",
+      "label": "Prepared By",
+      "options": "User"
+    },
+    {
+      "fieldname": "submitted_date",
+      "fieldtype": "Date",
+      "label": "Submitted Date"
+    },
+    {
+      "fieldname": "submission_reference",
+      "fieldtype": "Data",
+      "label": "Submission Reference"
+    },
+    {
+      "fieldname": "data_summary",
+      "fieldtype": "Table",
+      "label": "Data Summary",
+      "options": "NOTTO Report Data Summary"
+    },
+    {
+      "fieldname": "acknowledgement_received",
+      "fieldtype": "Check",
+      "label": "Acknowledgement Received"
+    },
+    {
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "label": "Status",
+      "options": "Draft\nSubmitted\nAcknowledged",
+      "default": "Draft",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "amended_from",
+      "fieldtype": "Link",
+      "label": "Amended From",
+      "options": "NOTTO Report",
+      "no_copy": 1,
+      "print_hide": 1,
+      "read_only": 1
+    }
+  ],
+  "module": "Organ Donation",
+  "name": "NOTTO Report",
+  "naming_rule": "By \"Naming Series\" field",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "role": "System Manager",
+      "permlevel": 0,
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "submit": 1,
+      "cancel": 1,
+      "amend": 1,
+      "report": 1,
+      "export": 1,
+      "print": 1,
+      "email": 1,
+      "share": 1
+    },
+    {
+      "role": "All",
+      "permlevel": 0,
+      "read": 1,
+      "report": 1
+    }
+  ],
+  "title_field": "report_type",
+  "track_changes": 1
+}

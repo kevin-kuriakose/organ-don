@@ -1,0 +1,117 @@
+{
+  "actions": [],
+  "autoname": "naming_series:",
+  "creation": "2024-01-01 00:00:00.000000",
+  "doctype": "DocType",
+  "editable_grid": 1,
+  "engine": "InnoDB",
+  "field_order": [
+    "naming_series",
+    "campaign",
+    "drive_name",
+    "drive_date",
+    "venue",
+    "volunteers",
+    "pledges_collected",
+    "donor_cards_distributed",
+    "media_coverage",
+    "feedback_summary",
+    "status"
+  ],
+  "fields": [
+    {
+      "fieldname": "naming_series",
+      "fieldtype": "Series",
+      "label": "Series",
+      "options": "PD-.YYYY.-.#####",
+      "default": "PD-.YYYY.-.#####"
+    },
+    {
+      "fieldname": "campaign",
+      "fieldtype": "Link",
+      "label": "Campaign",
+      "options": "Awareness Campaign"
+    },
+    {
+      "fieldname": "drive_name",
+      "fieldtype": "Data",
+      "label": "Drive Name",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "drive_date",
+      "fieldtype": "Date",
+      "label": "Drive Date",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "venue",
+      "fieldtype": "Data",
+      "label": "Venue"
+    },
+    {
+      "fieldname": "volunteers",
+      "fieldtype": "Table",
+      "label": "Volunteers",
+      "options": "Pledge Drive Volunteer"
+    },
+    {
+      "fieldname": "pledges_collected",
+      "fieldtype": "Int",
+      "label": "Pledges Collected",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "donor_cards_distributed",
+      "fieldtype": "Int",
+      "label": "Donor Cards Distributed"
+    },
+    {
+      "fieldname": "media_coverage",
+      "fieldtype": "Check",
+      "label": "Media Coverage"
+    },
+    {
+      "fieldname": "feedback_summary",
+      "fieldtype": "Small Text",
+      "label": "Feedback Summary"
+    },
+    {
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "label": "Status",
+      "options": "Planned\nCompleted\nCancelled",
+      "default": "Planned",
+      "in_list_view": 1
+    }
+  ],
+  "module": "Organ Donation",
+  "name": "Pledge Drive",
+  "naming_rule": "By \"Naming Series\" field",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "role": "System Manager",
+      "permlevel": 0,
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "report": 1,
+      "export": 1,
+      "print": 1,
+      "email": 1,
+      "share": 1
+    },
+    {
+      "role": "All",
+      "permlevel": 0,
+      "read": 1,
+      "report": 1
+    }
+  ],
+  "title_field": "drive_name",
+  "track_changes": 1
+}

@@ -1,0 +1,188 @@
+{
+  "actions": [],
+  "autoname": "naming_series:",
+  "creation": "2024-01-01 00:00:00.000000",
+  "doctype": "DocType",
+  "editable_grid": 1,
+  "engine": "InnoDB",
+  "field_order": [
+    "naming_series",
+    "donor_name",
+    "date_of_birth",
+    "gender",
+    "blood_group",
+    "abo_type",
+    "hospital_admitted",
+    "icu_admitted_date",
+    "cause_of_admission",
+    "cause_of_death",
+    "death_type",
+    "brain_death_declaration_date",
+    "brain_death_certificate_number",
+    "certifying_doctors",
+    "next_of_kin_consent_obtained",
+    "consent_form_number",
+    "consent_date",
+    "organs_consented",
+    "notto_referral_number",
+    "sotto_referral_number",
+    "coordinator_assigned",
+    "status"
+  ],
+  "fields": [
+    {
+      "fieldname": "naming_series",
+      "fieldtype": "Series",
+      "label": "Series",
+      "options": "DD-.YYYY.-.#####",
+      "default": "DD-.YYYY.-.#####"
+    },
+    {
+      "fieldname": "donor_name",
+      "fieldtype": "Data",
+      "label": "Donor Name",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "date_of_birth",
+      "fieldtype": "Date",
+      "label": "Date of Birth"
+    },
+    {
+      "fieldname": "gender",
+      "fieldtype": "Select",
+      "label": "Gender",
+      "options": "\nMale\nFemale\nOther"
+    },
+    {
+      "fieldname": "blood_group",
+      "fieldtype": "Select",
+      "label": "Blood Group",
+      "options": "\nA Positive\nA Negative\nB Positive\nB Negative\nAB Positive\nAB Negative\nO Positive\nO Negative"
+    },
+    {
+      "fieldname": "abo_type",
+      "fieldtype": "Select",
+      "label": "ABO Type",
+      "options": "\nA\nB\nAB\nO"
+    },
+    {
+      "fieldname": "hospital_admitted",
+      "fieldtype": "Link",
+      "label": "Hospital Admitted",
+      "options": "Hospital",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "icu_admitted_date",
+      "fieldtype": "Datetime",
+      "label": "ICU Admitted Date"
+    },
+    {
+      "fieldname": "cause_of_admission",
+      "fieldtype": "Data",
+      "label": "Cause of Admission"
+    },
+    {
+      "fieldname": "cause_of_death",
+      "fieldtype": "Data",
+      "label": "Cause of Death"
+    },
+    {
+      "fieldname": "death_type",
+      "fieldtype": "Select",
+      "label": "Death Type",
+      "options": "\nBrain Death\nDCD Cardiac Death"
+    },
+    {
+      "fieldname": "brain_death_declaration_date",
+      "fieldtype": "Datetime",
+      "label": "Brain Death Declaration Date",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "brain_death_certificate_number",
+      "fieldtype": "Data",
+      "label": "Brain Death Certificate Number"
+    },
+    {
+      "fieldname": "certifying_doctors",
+      "fieldtype": "Table",
+      "label": "Certifying Doctors",
+      "options": "Deceased Donor Certifying Doctor"
+    },
+    {
+      "fieldname": "next_of_kin_consent_obtained",
+      "fieldtype": "Check",
+      "label": "Next of Kin Consent Obtained"
+    },
+    {
+      "fieldname": "consent_form_number",
+      "fieldtype": "Data",
+      "label": "Consent Form Number"
+    },
+    {
+      "fieldname": "consent_date",
+      "fieldtype": "Date",
+      "label": "Consent Date"
+    },
+    {
+      "fieldname": "organs_consented",
+      "fieldtype": "Table",
+      "label": "Organs Consented",
+      "options": "Deceased Donor Organ Consented"
+    },
+    {
+      "fieldname": "notto_referral_number",
+      "fieldtype": "Data",
+      "label": "NOTTO Referral Number"
+    },
+    {
+      "fieldname": "sotto_referral_number",
+      "fieldtype": "Data",
+      "label": "SOTTO Referral Number"
+    },
+    {
+      "fieldname": "coordinator_assigned",
+      "fieldtype": "Link",
+      "label": "Coordinator Assigned",
+      "options": "Transplant Coordinator"
+    },
+    {
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "label": "Status",
+      "options": "Referred\nEvaluation\nBrain Death Declared\nConsent Obtained\nProcurement\nCompleted\nWithdrawn",
+      "default": "Referred",
+      "in_list_view": 1
+    }
+  ],
+  "module": "Organ Donation",
+  "name": "Deceased Donor",
+  "naming_rule": "By \"Naming Series\" field",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "role": "System Manager",
+      "permlevel": 0,
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "report": 1,
+      "export": 1,
+      "print": 1,
+      "email": 1,
+      "share": 1
+    },
+    {
+      "role": "All",
+      "permlevel": 0,
+      "read": 1,
+      "report": 1
+    }
+  ],
+  "title_field": "donor_name",
+  "track_changes": 1
+}

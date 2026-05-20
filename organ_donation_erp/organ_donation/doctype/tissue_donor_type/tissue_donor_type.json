@@ -1,0 +1,40 @@
+{
+  "actions": [],
+  "creation": "2024-01-01 00:00:00.000000",
+  "doctype": "DocType",
+  "editable_grid": 1,
+  "engine": "InnoDB",
+  "istable": 1,
+  "field_order": [
+    "tissue_type",
+    "quantity",
+    "retrieval_date"
+  ],
+  "fields": [
+    {
+      "fieldname": "tissue_type",
+      "fieldtype": "Select",
+      "label": "Tissue Type",
+      "options": "\nCornea\nBone\nSkin\nHeart Valve\nTendons\nAmniotic Membrane\nCartilage\nBlood Vessels\nNerve Graft",
+      "in_list_view": 1,
+      "reqd": 1
+    },
+    {
+      "fieldname": "quantity",
+      "fieldtype": "Data",
+      "label": "Quantity",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "retrieval_date",
+      "fieldtype": "Date",
+      "label": "Retrieval Date",
+      "in_list_view": 1
+    }
+  ],
+  "module": "Organ Donation",
+  "name": "Tissue Donor Type",
+  "owner": "Administrator",
+  "permissions": [],
+  "track_changes": 0
+}

@@ -1,0 +1,104 @@
+{
+  "actions": [],
+  "autoname": "field:recipient",
+  "creation": "2024-01-01 00:00:00.000000",
+  "doctype": "DocType",
+  "editable_grid": 1,
+  "engine": "InnoDB",
+  "field_order": [
+    "recipient",
+    "diagnosis_date",
+    "primary_diagnosis",
+    "comorbidities",
+    "previous_transplants",
+    "current_medications",
+    "allergies",
+    "hospitalization_history",
+    "current_clinical_status"
+  ],
+  "fields": [
+    {
+      "fieldname": "recipient",
+      "fieldtype": "Link",
+      "label": "Recipient",
+      "options": "Recipient",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "diagnosis_date",
+      "fieldtype": "Date",
+      "label": "Diagnosis Date"
+    },
+    {
+      "fieldname": "primary_diagnosis",
+      "fieldtype": "Data",
+      "label": "Primary Diagnosis",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "comorbidities",
+      "fieldtype": "Table",
+      "label": "Comorbidities",
+      "options": "Recipient Comorbidity"
+    },
+    {
+      "fieldname": "previous_transplants",
+      "fieldtype": "Table",
+      "label": "Previous Transplants",
+      "options": "Recipient Previous Transplant"
+    },
+    {
+      "fieldname": "current_medications",
+      "fieldtype": "Table",
+      "label": "Current Medications",
+      "options": "Recipient Current Medication"
+    },
+    {
+      "fieldname": "allergies",
+      "fieldtype": "Table",
+      "label": "Allergies",
+      "options": "Recipient Allergy"
+    },
+    {
+      "fieldname": "hospitalization_history",
+      "fieldtype": "Table",
+      "label": "Hospitalization History",
+      "options": "Recipient Hospitalization"
+    },
+    {
+      "fieldname": "current_clinical_status",
+      "fieldtype": "Select",
+      "label": "Current Clinical Status",
+      "options": "\nStable\nDeterioration\nCritical\nImproving",
+      "in_list_view": 1
+    }
+  ],
+  "module": "Organ Donation",
+  "name": "Recipient Medical History",
+  "naming_rule": "By fieldname",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "role": "System Manager",
+      "permlevel": 0,
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "report": 1,
+      "export": 1,
+      "print": 1,
+      "email": 1,
+      "share": 1
+    },
+    {
+      "role": "All",
+      "permlevel": 0,
+      "read": 1,
+      "report": 1
+    }
+  ],
+  "title_field": "recipient",
+  "track_changes": 1
+}

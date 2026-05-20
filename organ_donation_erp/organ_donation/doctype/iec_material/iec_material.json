@@ -1,0 +1,116 @@
+{
+  "actions": [],
+  "autoname": "naming_series:",
+  "creation": "2024-01-01 00:00:00.000000",
+  "doctype": "DocType",
+  "editable_grid": 1,
+  "engine": "InnoDB",
+  "field_order": [
+    "naming_series",
+    "material_name",
+    "type",
+    "language",
+    "topic",
+    "created_by",
+    "approved_by",
+    "distribution_count",
+    "target_audience",
+    "linked_campaign",
+    "status"
+  ],
+  "fields": [
+    {
+      "fieldname": "naming_series",
+      "fieldtype": "Series",
+      "label": "Series",
+      "options": "IEC-.YYYY.-.#####",
+      "default": "IEC-.YYYY.-.#####"
+    },
+    {
+      "fieldname": "material_name",
+      "fieldtype": "Data",
+      "label": "Material Name",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "type",
+      "fieldtype": "Select",
+      "label": "Type",
+      "options": "\nPoster\nBrochure\nBooklet\nVideo\nSocial Media Graphic\nRadio Script\nBanner\nStandee\nDonor Card",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "language",
+      "fieldtype": "Data",
+      "label": "Language"
+    },
+    {
+      "fieldname": "topic",
+      "fieldtype": "Data",
+      "label": "Topic"
+    },
+    {
+      "fieldname": "created_by",
+      "fieldtype": "Link",
+      "label": "Created By",
+      "options": "User"
+    },
+    {
+      "fieldname": "approved_by",
+      "fieldtype": "Link",
+      "label": "Approved By",
+      "options": "User"
+    },
+    {
+      "fieldname": "distribution_count",
+      "fieldtype": "Int",
+      "label": "Distribution Count"
+    },
+    {
+      "fieldname": "target_audience",
+      "fieldtype": "Data",
+      "label": "Target Audience"
+    },
+    {
+      "fieldname": "linked_campaign",
+      "fieldtype": "Data",
+      "label": "Linked Campaign"
+    },
+    {
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "label": "Status",
+      "options": "Draft\nApproved\nDistributed\nArchived",
+      "default": "Draft",
+      "in_list_view": 1
+    }
+  ],
+  "module": "Organ Donation",
+  "name": "IEC Material",
+  "naming_rule": "By \"Naming Series\" field",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "role": "System Manager",
+      "permlevel": 0,
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "report": 1,
+      "export": 1,
+      "print": 1,
+      "email": 1,
+      "share": 1
+    },
+    {
+      "role": "All",
+      "permlevel": 0,
+      "read": 1,
+      "report": 1
+    }
+  ],
+  "title_field": "material_name",
+  "track_changes": 1
+}

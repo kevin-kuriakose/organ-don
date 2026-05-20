@@ -1,0 +1,147 @@
+{
+  "actions": [],
+  "autoname": "naming_series:",
+  "creation": "2024-01-01 00:00:00.000000",
+  "doctype": "DocType",
+  "editable_grid": 1,
+  "engine": "InnoDB",
+  "is_submittable": 1,
+  "field_order": [
+    "naming_series",
+    "deceased_donor",
+    "organ_type",
+    "offered_to_recipient",
+    "offer_date",
+    "offer_expiry_date",
+    "transplant_center_offered",
+    "transplant_surgeon_contacted",
+    "response",
+    "decline_reason",
+    "response_date",
+    "offer_round_number",
+    "status",
+    "amended_from"
+  ],
+  "fields": [
+    {
+      "fieldname": "naming_series",
+      "fieldtype": "Series",
+      "label": "Series",
+      "options": "OO-.YYYY.-.#####",
+      "default": "OO-.YYYY.-.#####"
+    },
+    {
+      "fieldname": "deceased_donor",
+      "fieldtype": "Link",
+      "label": "Deceased Donor",
+      "options": "Deceased Donor",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "organ_type",
+      "fieldtype": "Select",
+      "label": "Organ Type",
+      "options": "\nKidney\nLiver\nHeart\nLung\nPancreas\nIntestine\nCornea",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "offered_to_recipient",
+      "fieldtype": "Link",
+      "label": "Offered To Recipient",
+      "options": "Recipient",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "offer_date",
+      "fieldtype": "Datetime",
+      "label": "Offer Date",
+      "reqd": 1
+    },
+    {
+      "fieldname": "offer_expiry_date",
+      "fieldtype": "Datetime",
+      "label": "Offer Expiry Date"
+    },
+    {
+      "fieldname": "transplant_center_offered",
+      "fieldtype": "Link",
+      "label": "Transplant Center",
+      "options": "Transplant Center"
+    },
+    {
+      "fieldname": "transplant_surgeon_contacted",
+      "fieldtype": "Data",
+      "label": "Surgeon Contacted"
+    },
+    {
+      "fieldname": "response",
+      "fieldtype": "Select",
+      "label": "Response",
+      "options": "\nAccepted\nDeclined\nNo Response\nCounter Offer",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "decline_reason",
+      "fieldtype": "Data",
+      "label": "Decline Reason"
+    },
+    {
+      "fieldname": "response_date",
+      "fieldtype": "Datetime",
+      "label": "Response Date"
+    },
+    {
+      "fieldname": "offer_round_number",
+      "fieldtype": "Int",
+      "label": "Offer Round Number"
+    },
+    {
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "label": "Status",
+      "options": "Open\nAccepted\nDeclined\nExpired",
+      "default": "Open",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "amended_from",
+      "fieldtype": "Link",
+      "label": "Amended From",
+      "options": "Organ Offer",
+      "no_copy": 1,
+      "print_hide": 1,
+      "read_only": 1
+    }
+  ],
+  "module": "Organ Donation",
+  "name": "Organ Offer",
+  "naming_rule": "By \"Naming Series\" field",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "role": "System Manager",
+      "permlevel": 0,
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "submit": 1,
+      "cancel": 1,
+      "amend": 1,
+      "report": 1,
+      "export": 1,
+      "print": 1,
+      "email": 1,
+      "share": 1
+    },
+    {
+      "role": "All",
+      "permlevel": 0,
+      "read": 1,
+      "report": 1
+    }
+  ],
+  "title_field": "deceased_donor",
+  "track_changes": 1
+}

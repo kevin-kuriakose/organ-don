@@ -1,0 +1,155 @@
+{
+  "actions": [],
+  "autoname": "naming_series:",
+  "creation": "2024-01-01 00:00:00.000000",
+  "doctype": "DocType",
+  "editable_grid": 1,
+  "engine": "InnoDB",
+  "field_order": [
+    "naming_series",
+    "deceased_donor",
+    "living_donor",
+    "recipient",
+    "organ_type",
+    "hla_a_match",
+    "hla_b_match",
+    "hla_dr_match",
+    "total_match_score",
+    "crossmatch_result",
+    "pra_compatibility",
+    "abo_compatibility",
+    "final_compatibility_score",
+    "matched_by",
+    "match_date",
+    "accepted",
+    "rejection_reason"
+  ],
+  "fields": [
+    {
+      "fieldname": "naming_series",
+      "fieldtype": "Series",
+      "label": "Series",
+      "options": "HLA-.YYYY.-.#####",
+      "default": "HLA-.YYYY.-.#####"
+    },
+    {
+      "fieldname": "deceased_donor",
+      "fieldtype": "Link",
+      "label": "Deceased Donor",
+      "options": "Deceased Donor"
+    },
+    {
+      "fieldname": "living_donor",
+      "fieldtype": "Link",
+      "label": "Living Donor",
+      "options": "Living Donor"
+    },
+    {
+      "fieldname": "recipient",
+      "fieldtype": "Link",
+      "label": "Recipient",
+      "options": "Recipient",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "organ_type",
+      "fieldtype": "Select",
+      "label": "Organ Type",
+      "options": "\nKidney\nLiver\nHeart\nLung\nPancreas",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "hla_a_match",
+      "fieldtype": "Int",
+      "label": "HLA-A Match (0-2)"
+    },
+    {
+      "fieldname": "hla_b_match",
+      "fieldtype": "Int",
+      "label": "HLA-B Match (0-2)"
+    },
+    {
+      "fieldname": "hla_dr_match",
+      "fieldtype": "Int",
+      "label": "HLA-DR Match (0-2)"
+    },
+    {
+      "fieldname": "total_match_score",
+      "fieldtype": "Float",
+      "label": "Total Match Score",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "crossmatch_result",
+      "fieldtype": "Select",
+      "label": "Crossmatch Result",
+      "options": "\nNegative\nPositive\nWeak Positive",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "pra_compatibility",
+      "fieldtype": "Select",
+      "label": "PRA Compatibility",
+      "options": "\nCompatible\nIncompatible\nBorderline"
+    },
+    {
+      "fieldname": "abo_compatibility",
+      "fieldtype": "Select",
+      "label": "ABO Compatibility",
+      "options": "\nCompatible\nIncompatible"
+    },
+    {
+      "fieldname": "final_compatibility_score",
+      "fieldtype": "Float",
+      "label": "Final Compatibility Score"
+    },
+    {
+      "fieldname": "matched_by",
+      "fieldtype": "Data",
+      "label": "Matched By"
+    },
+    {
+      "fieldname": "match_date",
+      "fieldtype": "Date",
+      "label": "Match Date"
+    },
+    {
+      "fieldname": "accepted",
+      "fieldtype": "Check",
+      "label": "Accepted"
+    },
+    {
+      "fieldname": "rejection_reason",
+      "fieldtype": "Data",
+      "label": "Rejection Reason"
+    }
+  ],
+  "module": "Organ Donation",
+  "name": "HLA Matching Record",
+  "naming_rule": "By \"Naming Series\" field",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "role": "System Manager",
+      "permlevel": 0,
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "report": 1,
+      "export": 1,
+      "print": 1,
+      "email": 1,
+      "share": 1
+    },
+    {
+      "role": "All",
+      "permlevel": 0,
+      "read": 1,
+      "report": 1
+    }
+  ],
+  "title_field": "recipient",
+  "track_changes": 1
+}
