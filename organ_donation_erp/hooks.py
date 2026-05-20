@@ -319,7 +319,7 @@ override_doctype_class = {
     "Authorization Committee Record": "organ_donation_erp.organ_donation.doctype.authorization_committee_record.authorization_committee_record.AuthorizationCommitteeRecord",
     "Medico Legal Case": "organ_donation_erp.organ_donation.doctype.medico_legal_case.medico_legal_case.MedicoLegalCase",
     "Audit Log": "organ_donation_erp.organ_donation.doctype.audit_log.audit_log.AuditLog",
-    "NOTTO Report Data Summary": "organ_donation_erp.organ_donation.doctype.notto_report_data_summary.notto_report_data_summary.NOTTOReportDataSummary",
+    "NOTTO Report Data Summary": "organ_donation_erp.organ_donation.doctype.notto_report_data_summary.notto_report_data_summary.NottoReportDataSummary",
     "NOTTO Report": "organ_donation_erp.organ_donation.doctype.notto_report.notto_report.NOTTOReport",
     "Tissue Donor Type": "organ_donation_erp.organ_donation.doctype.tissue_donor_type.tissue_donor_type.TissueDonorType",
     "Tissue Donor": "organ_donation_erp.organ_donation.doctype.tissue_donor.tissue_donor.TissueDonor",
