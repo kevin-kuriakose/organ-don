@@ -335,3 +335,13 @@ scheduled_tasks = {
         ]
     }
 }
+
+fixtures = [
+    {"doctype": "Workspace", "filters": [["name", "in", ["LifeEdge"]]]},
+    {"doctype": "Notification", "filters": [["document_type", "in", [
+        "Transplant Surgery", "Organ Offer", "Waitlist Entry", "Awareness Campaign",
+        "Green Corridor Request", "Medico Legal Case", "Authorization Committee Record",
+        "NOTTO Report", "Rejection Episode", "Post Transplant Follow Up",
+        "Staff Training", "THOTA Compliance Record"
+    ]]]},
+]
