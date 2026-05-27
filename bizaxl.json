@@ -1,0 +1,21 @@
+{
+    "app_name": "organ_donation_erp",
+    "display_name": "LifeEdge",
+    "description": "Organ Donation & Transplant Management",
+    "show_modules": [
+        "Accounts", "Buying", "Selling",
+        "HR", "Contacts", "Non Profit"
+    ],
+    "hide_modules": [
+        "Manufacturing", "Stock", "Agriculture",
+        "Education", "Hospitality", "E-commerce",
+        "Loan Management", "Utilities", "CRM",
+        "Assets", "Quality"
+    ],
+    "optional_modules": [
+        {"module": "Projects", "label": "Projects", "description": "Track research and outreach projects"},
+        {"module": "Support", "label": "Support & Helpdesk", "description": "Family support tickets"},
+        {"module": "Website", "label": "Website & CMS", "description": "Public awareness portal"},
+        {"module": "Healthcare", "label": "Healthcare", "description": "Healthcare module integration"}
+    ]
+}
